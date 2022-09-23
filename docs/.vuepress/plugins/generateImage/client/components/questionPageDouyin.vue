@@ -95,7 +95,7 @@ img {
   text-align: center;
   color: #f8e106;
   color: #fff;
-  margin-top: 150px;
+  margin-top: 139px;
   height: 320px;
   /*background: #fff;*/
   display: flex;
