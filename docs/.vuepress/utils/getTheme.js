@@ -52,8 +52,10 @@ const getAllSideBarItem = (item) => {
         const filePath = path.join(curPath, file)
         const stat = fs.statSync(filePath)
         if (!stat.isDirectory() && filePath.endsWith(".md")) {
+            let text = file.slice(5, -3)
+            text = text.length > 11 ? text.slice(0, 11) + "..." : text
             sidebarList.push({
-                text: file,
+                text,
                 link: file
             })
         }

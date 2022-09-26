@@ -5,11 +5,12 @@
       <button>生成小红书图片</button>
       <button>生成B站图片</button>
     </div>
-
     <div class="originalDom">
       <question-page-douyin :title="title" @question="done" :random="random"></question-page-douyin>
       <!--     <questionPage :title="title" @question="done" :random="random"></questionPage>-->
       <answer :content="content" :type="type" :title="title" :random="random" @answer="done"></answer>
+
+      <list @done="done" :title="title" :random="random"></list>
     </div>
 
     <div class="preview" v-if="showPreview" @click="showPreview = false">
@@ -29,13 +30,15 @@ import { usePageData } from "@vuepress/client"
 import questionPage from "./questionPage.vue";
 import questionPageDouyin from "./questionPageDouyin.vue";
 import answer from "./answer.vue"
-import { imageSave } from "./../utils/base64Save.js"
+import { imageSave } from "../utils/base64Save"
+import list from "./list.vue";
 export default {
   name: "index",
   components: {
     questionPageDouyin,
     questionPage,
-    answer
+    answer,
+    list
   },
   data() {
     return {
@@ -71,7 +74,7 @@ export default {
       this.state++
       // console.log($event)
       this.imgList.push(...$event)
-      if (this.state === 2) {
+      if (this.state === 3) {
         console.log(this.imgList)
         this.loading = false
       }
@@ -135,7 +138,7 @@ export default {
   right: 10px;
 }
 .originalDom {
-  z-index: -100;
+  z-index: -10000;
   position: fixed;
   top: 0;
   left: 0;
