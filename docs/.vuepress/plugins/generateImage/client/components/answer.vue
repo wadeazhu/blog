@@ -2,7 +2,7 @@
   <div>
 <!--    <button @click="download()">下载</button>-->
 <!--    <img :src=img alt="">-->
-    <section class="wrapper" ref="answer" v-for="(card, index) in cards" :key="index" style="position: absolute;left: 0;top: 0;">
+    <section class="wrapper" ref="answer" v-for="(card, index) in cards" :key="index" style="position: absolute; left: 0; top: 0">
       <section class="inner">
         <div v-html="card.innerHTML"></div>
         <div class="footer"><img src="./1.png" width="20" alt="" />每天一个前端面试题，私"1"get更多资料</div>
@@ -84,21 +84,19 @@ export default {
         // 这里每次循环增加一个div.content, 然后往里面的div写字符
         let $content = document.createElement("div")
         $content.className = 'content'
-        const $img = document.createElement("img")
-        $img.src = taiyang
-        $img.width = 40
-        $img.className = "summary"
 
         let $html = document.createElement("p")
-        $content.appendChild($img)
+
         $content.appendChild($html)
         $div.appendChild($content)
 
-        for (let end = 0, start = 0 ; end < curContent.length + 1 ; end++) {
+        let isAddPreImg = true
+        for (let end = 1, start = 0 ; end < curContent.length + 1 ; end++) {
           // 然后往里面去写，如果高度大于某个高度，那么重置这个$div,
           //     然后往里面增加子div，然后从当前位置给他继续些内容
           $html.innerHTML = curContent.slice(start, end)
           if ($div.clientHeight > 615) {
+            isAddPreImg = true
             $html.innerHTML = curContent.slice(start, end - 1)
             end--
             start = end
@@ -109,6 +107,16 @@ export default {
             $html = document.createElement("p")
             $content.appendChild($html)
             $div.appendChild($content)
+          } else {
+            if (isAddPreImg && end === 1 && start === 0) {
+              const $img = document.createElement("img")
+              $img.src = taiyang
+              $img.width = 40
+              $img.className = "summary"
+              $content.insertBefore($img, $html)
+              isAddPreImg = false
+              console.log($img.clientHeight, $div.clientHeight)
+            }
           }
         }
       }

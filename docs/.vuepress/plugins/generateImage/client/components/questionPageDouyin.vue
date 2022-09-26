@@ -2,8 +2,7 @@
   <section>
 <!--    <button @click="genImgBase64()">下载</button>-->
 <!--    <img :src=img alt="">-->
-    <div class="wrapper" ref="question" style="position: absolute;top: 0;left: 0.
-">
+    <div class="wrapper" ref="question" style="position: absolute;top: 0;left: 0">
       <div class="title"><img src="./2.png" width="30">每日一个前端面试题</div>
       <section class="content">
 <!--        <div><span>问题:</span> </div>-->
