@@ -9,6 +9,13 @@ export default defineUserConfig({
     lang: "zh-CN",
     title: "每日记录",
     description: "这是我的VuePress站点",
+    markdown: {
+        code: {
+            lineNumbers: true,
+            highlightLines: false,
+            preWrapper: false
+        }
+    },
     theme: defaultTheme({
         navbar: getNavbar(),
         sidebar: getSideBar()

@@ -7602,7 +7602,14 @@
                                 this.ctx.fillStyle = asString(this.options.backgroundColor);
                                 this.ctx.fillRect(0, 0, this.options.width * this.options.scale, this.options.height * this.options.scale);
                             }
+
                             this.ctx.drawImage(img, -this.options.x * this.options.scale, -this.options.y * this.options.scale);
+                            // const height = img.height
+                            // const interval = 1000
+                            // const length = Math.floor(height / interval)
+                            // for (let i = 0 ; i < length ; i++) {
+                            //     this.ctx.drawImage(img, -this.options.x * this.options.scale, -this.options.y * this.options.scale + interval * i, img.width, interval);
+                            // }
                             return [2 /*return*/, this.canvas];
                     }
                 });

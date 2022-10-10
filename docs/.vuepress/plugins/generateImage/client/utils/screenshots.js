@@ -1,4 +1,4 @@
-// import "./html2canvas.js";
+// import "./html2canvas2.js";
 import html2canvas from "html2canvas";
 import { imageSave } from "./base64Save"
 let x1 = 0
@@ -65,14 +65,14 @@ export function generateImage(dom, parentDom) {
         curMoveDom = null
     }
     domWidth = dom.clientWidth
-    dom.style.width = '631px'
+    // dom.style.width = '631px'
+    // dom.style.width = '600px'
     return html2canvas(dom, {
         x: -dom.offsetLeft,
         // x: 0, y: 0,
         foreignObjectRendering: true,
         // dpi: 192
         scale: 2,
-        imageTimeout: 30000,
     }).then(canvas => {
         canvasHeight = canvas.height * canvasWidth / canvas.width
         canvas.className = 'sourceCanvas'
