@@ -4,4 +4,5 @@ export const data = [
     {id: "", text: "说说几种前端储存以及它们之间的区别"},
     {id: "", text: "说说href和src有什么区别？"},
     {id: "", text: "meta有哪些属性，作用是什么？"},
+    {id: "", text: "什么是语义化？"},
 ]
