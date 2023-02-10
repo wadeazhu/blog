@@ -5,8 +5,7 @@ import fs from "fs";
 const __filenameNew = fileURLToPath(import.meta.url)
 const __dirnameNew = path.dirname(__filenameNew)
 
-const wrapperRoot = path.join(__dirnameNew, './../docs/')
-
+const wrapperRoot = './../docs/'
 const pathList = ['base', 'advance', 'interview', 'other', 'temp']
 
 pathList.forEach(item => {
