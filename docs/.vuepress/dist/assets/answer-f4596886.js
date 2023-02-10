@@ -1,1 +1,0 @@
-import{_ as n,M as o,p as t,U as s}from"./framework-34d4cddf.js";const r={name:"answer"};function a(c,_,p,f,l,m){const e=o("Content");return t(),s(e,{"slot-key":"answer"})}const u=n(r,[["render",a],["__file","answer.vue"]]);export{u as default};

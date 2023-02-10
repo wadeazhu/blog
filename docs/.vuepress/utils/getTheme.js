@@ -3,19 +3,21 @@ import fs from "fs"
 
 const root = path.join(__dirname, "./../../../")
 const ignore = ['README.md', '.vuepress']
-const subjectRoot = path.join(root, "./docs/subject")
+const getDirectoryRoot = value => path.join(root, `./docs/${value}`)
 
-const getAllNavbarItem = () => {
-    const files = fs.readdirSync(subjectRoot).filter(file => !ignore.includes(file))
+const getAllNavbarItem = (value) => {
+    console.log(value)
+    const directoryRoot = getDirectoryRoot(value)
+    const files = fs.readdirSync(directoryRoot).filter(file => !ignore.includes(file))
     const allAllNavbar = []
 
     files.forEach(file => {
-        const curPath = path.join(subjectRoot, file)
+        const curPath = path.join(directoryRoot, file)
         const stat = fs.statSync(curPath)
         if (stat.isDirectory()) {
             const navbarItem = {
                 text: file,
-                link: "/subject/" + file + "/"
+                link: `/${value}/${file}/`
             }
             allAllNavbar.push(navbarItem)
         }
@@ -23,28 +25,56 @@ const getAllNavbarItem = () => {
     return allAllNavbar
 }
 
-const allNavbarItem = getAllNavbarItem()
+// 读取目录
+const base = getAllNavbarItem('base')
+const advance = getAllNavbarItem('advance')
+const interview = getAllNavbarItem('interview')
+const other = getAllNavbarItem('other')
+const temp = getAllNavbarItem('temp')
+const getAllNavbar = { base, advance, interview, other, temp }
+
+// 读取目录下的所有文件
 
 export const getNavbar = () => {
-    const navbar = []
-    navbar.push({
-        text: "类别",
-        children: allNavbarItem
-    })
-    return navbar
+    return [
+        {
+            text: "基础知识",
+            children: getAllNavbar.base
+        },
+        {
+            text: "进阶",
+            children: getAllNavbar.advance
+        },
+        {
+            text: '面试',
+            children: getAllNavbar.interview
+        },
+        {
+            text: '其他',
+            children: getAllNavbar.other
+        },
+        {
+            text: "临时",
+            children: getAllNavbar.temp
+        }
+    ]
 }
 
 
 export const getSideBar = () => {
     const allSidebar = {}
-    allNavbarItem.forEach(item => {
-        allSidebar[item.link] = getAllSideBarItem(item.link)
+    const allNavBar = Object.entries(getAllNavbar)
+    allNavBar.forEach(([key, navBarItem]) => {
+        navBarItem.forEach(item => {
+            allSidebar[item.link] = getAllSideBarItem(item.link, key)
+        })
     })
     return allSidebar
 }
 
-const getAllSideBarItem = (item) => {
-    const curPath = path.join(subjectRoot, '../', item)
+const getAllSideBarItem = (item, value) => {
+    const directoryRoot = getDirectoryRoot(value)
+    const curPath = path.join(directoryRoot, '../', item)
     const files = fs.readdirSync(curPath).filter(file => !ignore.includes(file))
 
     const sidebarList = []
@@ -52,7 +82,7 @@ const getAllSideBarItem = (item) => {
         const filePath = path.join(curPath, file)
         const stat = fs.statSync(filePath)
         if (!stat.isDirectory() && filePath.endsWith(".md")) {
-            let text = file.slice(5, -3)
+            let text = file.slice()
             text = text.length > 11 ? text.slice(0, 11) + "..." : text
             sidebarList.push({
                 text,
@@ -62,3 +92,6 @@ const getAllSideBarItem = (item) => {
     })
     return sidebarList
 }
+
+// 自动生成每个目录下的 README.md 文件
+// const genDireReadme(link)
