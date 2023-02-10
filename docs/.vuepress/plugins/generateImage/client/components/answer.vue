@@ -5,7 +5,7 @@
     <section class="wrapper" ref="answer" v-for="(card, index) in cards" :key="index" style="position: absolute; left: 0; top: 0">
       <section class="inner">
         <div v-html="card.innerHTML"></div>
-        <div class="footer"><img src="./1.png" width="20" alt="" />每天一个前端面试题，私"1"get更多资料</div>
+        <div class="footer"><img src="./1.png" :width="20" alt="" />每天一个前端面试题，私"1"get更多资料</div>
 <!--        <div class="type"><img src="./4.png" alt="" width="40">{{type}}</div>-->
 <!--        <div class="content" v-for="(item, index) in content"  :key="index" >-->
 <!--          <img src="./5.png" alt="" width="40" class="summary" />-->
@@ -24,7 +24,7 @@ export default {
   name: "answer",
   props: {
     content: {
-      type: [NodeList, null],
+      type: [null],
       default: () => null
     },
     type: {
@@ -47,7 +47,7 @@ export default {
     }
   },
   watch: {
-    "random": function (newVal, oldVal) {
+    "random": function (newVal) {
       if (newVal) {
         this.genImgBase64()
       }
@@ -166,18 +166,6 @@ img {
   font-size: 18px;
   padding: 20px 20px 60px;
 }
-.innerAutoHeight {
-  background: #fff;
-  border-radius: 5px;
-  color: #666;
-  font-size: 18px;
-  padding: 20px 20px 60px;
-}
-.summary {
-  float: left;
-  margin-top: 6px;
-  margin-right: 4px;
-}
 .type {
   font-size: 30px;
   color: #585779;
@@ -204,11 +192,6 @@ code {
   background-color: unset;
   border-radius: 3px;
   overflow-wrap: break-word;
-}
-.left10000 {
-  position: absolute;
-  left: -100000em;
-  padding: 13px;
 }
 .footer {
   position: absolute;
