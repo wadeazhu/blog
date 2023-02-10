@@ -1,5 +1,6 @@
 <template>
   <section>
+    <index1></index1>
     <div class="genImageBtn">
       <button @click="image()">生成通用图片</button>
     </div>
@@ -16,14 +17,17 @@
 </template>
 
 <script>
+
 import "./../utils/screenshots.css"
 import {generateImage, close, download} from "./../utils/screenshots.js"
 // import "./../utils/html2canvas.js";
 // import html2canvas from "html2canvas";
 // import "./../utils/html2canvas2.js"
 import {imageSave} from "../utils/base64Save";
+import index1 from "./index1.vue";
 export default {
   name: "index",
+  components: {index1},
   data() {
     return {
       showPreview: false,

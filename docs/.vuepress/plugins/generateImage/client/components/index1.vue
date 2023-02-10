@@ -1,17 +1,14 @@
 <template>
   <section>
     <div class="genImageBtn">
-      <button @click="image()">生成通用图片</button>
-      <button @click="DYImage()">生成抖音图片</button>
-      <button>生成小红书图片</button>
-      <button>生成B站图片</button>
+      <button @click="DYImage()" style="left: -108px;position: relative">生成抖音图片</button>
     </div>
     <div class="originalDom">
       <question-page-douyin :title="title" @question="done" :random="random"></question-page-douyin>
       <!--     <questionPage :title="title" @question="done" :random="random"></questionPage>-->
-      <answer :content="content" :type="type" :title="title" :random="random" @answer="done"></answer>
+<!--      <answer :content="content" :type="type" :title="title" :random="random" @answer="done"></answer>-->
 
-      <list @done="done" :title="title" :random="random"></list>
+<!--      <list @done="done" :title="title" :random="random"></list>-->
     </div>
 
     <div class="preview" v-if="showPreview" @click="showPreview = false">
@@ -71,8 +68,8 @@ export default {
       this.state = 0
       this.imgList = []
       this.title = usePageData().value.title
-      this.type = document.querySelector("summary").innerText
-      this.content = document.querySelectorAll(".custom-container > *:not(summary)")
+      // this.type = document.querySelector("summary").innerText
+      // this.content = document.querySelectorAll(".custom-container > *:not(summary)")
       this.random = Math.random()
       // console.log(this.content)
     },
@@ -80,7 +77,7 @@ export default {
       this.state++
       // console.log($event)
       this.imgList.push(...$event)
-      if (this.state === 3) {
+      if (this.state === 1) {
         console.log(this.imgList)
         this.loading = false
       }

@@ -1,6 +1,5 @@
 <template>
   <div class="theme-container">
-
     <Content slot-name=""/>
   </div>
 </template>
