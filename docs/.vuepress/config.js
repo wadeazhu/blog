@@ -5,10 +5,11 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { path, getDirname } from '@vuepress/utils'
 const __dirname = getDirname(import.meta.url)
 
+
 export default defineUserConfig({
     base: "/blog/",
     lang: "zh-CN",
-    title: "每日记录",
+    title: "笔记",
     description: "这是我的VuePress站点",
     markdown: {
         code: {
@@ -21,13 +22,13 @@ export default defineUserConfig({
         navbar: getNavbar(),
         sidebar: getSideBar()
         // sidebar: {
-        //     "/subject/html/": [
+        //     "/base/html/": [
         //         {
         //             text: "01",
         //             link: "01.md"
         //         }
         //     ],
-        //     "/subject/css/": [
+        //     "/base/css/": [
         //         {
         //             text: "01",
         //             link: "01.md"
@@ -41,10 +42,10 @@ export default defineUserConfig({
         // sidebar: [
         //     {
         //         text: "html",
-        //         link: "/subject/html/",
+        //         link: "/base/html/",
         //         children: [{
         //             text: "01",
-        //             link: "/subject/html/01.md"
+        //             link: "/base/html/01.md"
         //         }]
         //     }
         // ]
