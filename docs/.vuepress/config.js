@@ -6,6 +6,7 @@ import { path, getDirname } from '@vuepress/utils'
 const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
+    base: "/blog/",
     lang: "zh-CN",
     title: "每日记录",
     description: "这是我的VuePress站点",
