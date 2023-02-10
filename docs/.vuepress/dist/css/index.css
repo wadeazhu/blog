@@ -1,0 +1,9 @@
+.sidebar-item.sidebar-heading {
+    width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+body {
+    color: red;
+}
