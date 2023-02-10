@@ -21,7 +21,7 @@ jobs:
           node-version: 18
 
       - name: 安装npm
-        uses: npm install
+        run: npm install
 
       - name: Build Vuepress site
         run: pnpm docs:build
