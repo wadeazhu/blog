@@ -22,7 +22,7 @@ pathList.forEach(item => {
             files.forEach(file => {
                 const curPath = path.join(curDirePath, file)
                 const stat = fs.statSync(curPath)
-                if (stat.isFile() && !curPath.endsWith('README.md')) {
+                if (stat.isFile() && !curPath.endsWith('README.md') && curPath.endsWith('.gitkeep')) {
                     fileStr+=`[${file}](/blog/${item}/${dire}/${file}/)<br/>`
                 }
             })
