@@ -12,7 +12,7 @@ export const genReadme = (env) => {
     }
     pathList.forEach(item => {
         const root = path.join(__dirnameNew, wrapperRoot, item)
-        const direList = fs.readdirSync(root) // base 下面的目录
+        const direList = fs.readdirSync(path.resolve(root)) // base 下面的目录
 
         direList.forEach(dire => {
             let fileStr = ''
