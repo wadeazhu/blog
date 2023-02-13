@@ -7,6 +7,8 @@ export const genReadme = (env) => {
     const __dirnameNew = path.dirname(__filenameNew)
     const pathList = ['base', 'advance', 'interview', 'other', 'temp']
     const wrapperRoot = './docs/'
+    console.log(__dirnameNew)
+    return
     pathList.forEach(item => {
         let _root = __dirnameNew
         if (env === 'build') _root = path.join('')
