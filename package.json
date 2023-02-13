@@ -5,8 +5,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "docs:dev": "node script/genDevReadme.js && vuepress dev docs",
-    "docs:build": "node script/genBuildReadme.js && vuepress build docs"
+    "genReadme": "node script/genReadme.js",
+    "docs:dev": "npm run genReadme && vuepress dev docs",
+    "docs:build": "npm run genReadme && vuepress build docs"
   },
   "devDependencies": {
     "@types/node": "^18.7.17",

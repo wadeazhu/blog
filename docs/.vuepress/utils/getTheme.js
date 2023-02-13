@@ -6,7 +6,6 @@ const ignore = ['README.md', '.vuepress']
 const getDirectoryRoot = value => path.join(root, `./docs/${value}`)
 
 const getAllNavbarItem = (value) => {
-    console.log(value)
     const directoryRoot = getDirectoryRoot(value)
     const files = fs.readdirSync(directoryRoot).filter(file => !ignore.includes(file))
     const allAllNavbar = []
