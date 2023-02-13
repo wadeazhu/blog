@@ -6,14 +6,12 @@ export const genReadme = (env) => {
     const __filenameNew = fileURLToPath(import.meta.url)
     const __dirnameNew = path.dirname(__filenameNew)
     const pathList = ['base', 'advance', 'interview', 'other', 'temp']
-    const wrapperRoot = './docs/'
-    console.log(__dirnameNew)
-    return
+    let wrapperRoot = './../docs'
+    if (env === 'build') {
+        wrapperRoot = './../../docs'
+    }
     pathList.forEach(item => {
-        let _root = __dirnameNew
-        if (env === 'build') _root = path.join('')
-        console.log(__dirnameNew, '__dirnameNew')
-        const root = path.join(_root ,wrapperRoot, item)
+        const root = path.join(__dirnameNew, wrapperRoot, item)
         const direList = fs.readdirSync(root) // base 下面的目录
 
         direList.forEach(dire => {
