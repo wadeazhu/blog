@@ -2,15 +2,13 @@ import path from "path";
 // import {fileURLToPath} from 'url'
 import fs from "fs";
 
-export const genReadme = (wrapperRoot) => {
+export const genReadme = () => {
     // const __filenameNew = fileURLToPath(import.meta.url)
     // const __dirnameNew = path.dirname(__filenameNew)
-
     const pathList = ['base', 'advance', 'interview', 'other', 'temp']
-
+    const wrapperRoot = './docs/'
     pathList.forEach(item => {
-        const root = path.join(wrapperRoot, '..',item)
-        console.log(root, 'root')
+        const root = path.join('..',wrapperRoot, item)
         const direList = fs.readdirSync(root) // base 下面的目录
 
         direList.forEach(dire => {
