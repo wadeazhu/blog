@@ -1,9 +1,11 @@
 import path from "path";
-// import {fileURLToPath} from 'url'
+import {fileURLToPath} from 'url'
 import fs from "fs";
 
-// const __filenameNew = fileURLToPath(import.meta.url)
-// const __dirnameNew = path.dirname(__filenameNew)
+const __filenameNew = fileURLToPath(import.meta.url)
+const __dirnameNew = path.dirname(__filenameNew)
+
+console.log(__dirnameNew, '124124')
 
 const wrapperRoot = './docs/'
 const pathList = ['base', 'advance', 'interview', 'other', 'temp']
