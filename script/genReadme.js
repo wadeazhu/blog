@@ -5,12 +5,12 @@ import fs from "fs";
 // const __filenameNew = fileURLToPath(import.meta.url)
 // const __dirnameNew = path.dirname(__filenameNew)
 
-const wrapperRoot = './../docs/'
+const wrapperRoot = './docs/'
 const pathList = ['base', 'advance', 'interview', 'other', 'temp']
 
 pathList.forEach(item => {
     const root = path.join(wrapperRoot, item)
-    const direList = fs.readdirSync(path.resolve(root)) // base 下面的目录
+    const direList = fs.readdirSync(root) // base 下面的目录
 
     direList.forEach(dire => {
         let fileStr = ''
