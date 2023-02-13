@@ -8,11 +8,11 @@ export const genReadme = (env) => {
     const pathList = ['base', 'advance', 'interview', 'other', 'temp']
     let wrapperRoot = './../docs'
     if (env === 'build') {
-        wrapperRoot = './../../docs'
+        wrapperRoot = './../docs'
     }
     pathList.forEach(item => {
         const root = path.join(__dirnameNew, wrapperRoot, item)
-        const direList = fs.readdirSync(path.resolve(root)) // base 下面的目录
+        const direList = fs.readdirSync(root) // base 下面的目录
 
         direList.forEach(dire => {
             let fileStr = ''
