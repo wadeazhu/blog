@@ -9,7 +9,7 @@ export const genReadme = (wrapperRoot) => {
     const pathList = ['base', 'advance', 'interview', 'other', 'temp']
 
     pathList.forEach(item => {
-        const root = path.join(wrapperRoot, item)
+        const root = path.join(wrapperRoot,'../', item)
         console.log(root, 'root')
         const direList = fs.readdirSync(root) // base 下面的目录
 
