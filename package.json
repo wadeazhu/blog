@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "docs:dev": "node script/genDevReadme.js && vuepress dev docs",
-    "docs:build": "node genBuildReadme.js && vuepress build docs"
+    "docs:build": "node script/genBuildReadme.js && vuepress build docs"
   },
   "devDependencies": {
     "@types/node": "^18.7.17",
