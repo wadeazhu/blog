@@ -5,7 +5,7 @@ import fs from "fs";
 export const genReadme = (env) => {
     const __filenameNew = fileURLToPath(import.meta.url)
     const __dirnameNew = path.dirname(__filenameNew)
-    const pathList = ['base', 'advance', 'interview', 'other', 'temp']
+    const pathList = ['base/', 'advance/', 'interview/', 'other/', 'temp/']
     let wrapperRoot = './../docs'
     if (env === 'build') {
         wrapperRoot = './../docs'
