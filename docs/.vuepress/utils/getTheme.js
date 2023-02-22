@@ -59,15 +59,19 @@ export const getNavbar = () => {
     ]
 }
 
+console.log(JSON.stringify(getNavbar()))
+
 
 export const getSideBar = () => {
     const allSidebar = {}
     const allNavBar = Object.entries(getAllNavbar)
     allNavBar.forEach(([key, navBarItem]) => {
+        console.log(navBarItem, 'navBarItem')
         navBarItem.forEach(item => {
             allSidebar[item.link] = getAllSideBarItem(item.link, key)
         })
     })
+    console.log(JSON.stringify(allSidebar))
     return allSidebar
 }
 
@@ -76,19 +80,23 @@ const getAllSideBarItem = (item, value) => {
     const curPath = path.join(directoryRoot, '../', item)
     const files = fs.readdirSync(curPath).filter(file => !ignore.includes(file))
 
+
     const sidebarList = []
     files.forEach(file => {
         const filePath = path.join(curPath, file)
+        console.log(filePath, 'filePath')
         const stat = fs.statSync(filePath)
         if (!stat.isDirectory() && filePath.endsWith(".md")) {
             let text = file.slice()
             text = text.length > 11 ? text.slice(0, 11) + "..." : text
+            // console.log(text, '00000')
             sidebarList.push({
                 text,
                 link: file
             })
         }
     })
+    console.log(sidebarList, 'sidebarList')
     return sidebarList
 }
 
