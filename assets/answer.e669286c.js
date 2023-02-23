@@ -1,0 +1,1 @@
+import{_ as n,r as o,o as t,f as s}from"./app.d0874179.js";const r={name:"answer"};function a(c,_,p,f,l,m){const e=o("Content");return t(),s(e,{"slot-key":"answer"})}const u=n(r,[["render",a],["__file","answer.vue"]]);export{u as default};
