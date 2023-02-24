@@ -88,6 +88,7 @@ const getAllSideBarItem = (item, value) => {
         const stat = fs.statSync(filePath)
         if (!stat.isDirectory() && filePath.endsWith(".md")) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             let text = file.slice()
             text = text.length > 11 ? text.slice(0, 11) + "..." : text
             // console.log(text, '00000')
@@ -95,6 +96,11 @@ const getAllSideBarItem = (item, value) => {
             let text = file.slice(5, -3)
             text = text.length > 11 ? text.slice(0, 11) + "..." : text
 >>>>>>> 12cc07a (meta有哪些属性，作用是什么？)
+=======
+            let text = file.slice()
+            text = text.length > 11 ? text.slice(0, 11) + "..." : text
+            // console.log(text, '00000')
+>>>>>>> f50b1852f2e96b19ac95ed3b323729622baa3c11
             sidebarList.push({
                 text,
                 link: file
@@ -105,8 +111,14 @@ const getAllSideBarItem = (item, value) => {
     return sidebarList
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // 自动生成每个目录下的 README.md 文件
 // const genDireReadme(link)
 =======
 >>>>>>> 12cc07a (meta有哪些属性，作用是什么？)
+=======
+
+// 自动生成每个目录下的 README.md 文件
+// const genDireReadme(link)
+>>>>>>> f50b1852f2e96b19ac95ed3b323729622baa3c11
