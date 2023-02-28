@@ -2,6 +2,20 @@
 title: 学习计划安排
 ---
 
+`base`: 基础知识
+
+`advance`: 进阶
+
+`interview`: 面试
+
+`other`: 其他
+
+`subject`: 临时
+
+------
+
+
+
 ## HTML
 
 - [ ] HTML基础语法 
@@ -306,4 +320,3 @@ title: 学习计划安排
 - [ ] 声明式与命令式
 
 ### Redux 中间件
-
