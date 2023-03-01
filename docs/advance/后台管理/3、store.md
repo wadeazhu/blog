@@ -82,3 +82,20 @@ function piniaStoragePluginCreator(value: string | string[], storageType: storag
 export default piniaStoragePluginCreator
 ```
 
+## 实现一个userInfo的Store
+
+```tsx
+import {ref} from "@vue/reactivity";
+
+export const useUserInfo = defineStore('userInfoStore', () => {
+    const userInfo = ref<userModal>({
+        pwUserDetailVO: {}
+    })
+    
+    const setUserInfo = function (info) {
+        userInfo.value = info
+        setCookie('token', info.token)
+    }
+})
+
+```
