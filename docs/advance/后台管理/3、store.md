@@ -92,10 +92,32 @@ export const useUserInfo = defineStore('userInfoStore', () => {
         pwUserDetailVO: {}
     })
     
+    // 设置用户信息
     const setUserInfo = function (info) {
         userInfo.value = info
         setCookie('token', info.token)
     }
+    
+    interface userModal {
+        token?: string
+        name?: string
+        phone?: string
+        pwUserDetailVO?: object
+    }
+    
+    // 获取用户信息
+    const getUserInfo = function():userModal {
+        return userInfo.value
+    }
+    
+    // 清除用户信息
+    const clearUserInfo = function() {
+        userInfo.value = {
+            pwUserDateilVO: {}
+        }
+    }
+    
+    return { userInfo, setUserInfo, getUserInfo, clearUserInfo }
 })
 
 ```
