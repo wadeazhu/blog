@@ -1,9 +1,9 @@
 # 全局数据管理
 
-## 创建Pinia
+## 创建`Pinia`
 
 1. 第一步 `createPinia()`
-2. 将一些数据与本地存储关联
+2. 将一些数据与本地存储关联，当储存的$store变化的时候，同时更新本地存储
 3. 导出创建的`Pinia`变量
 
 ```tsx
@@ -29,7 +29,15 @@ export { pinia }
 
 
 
-## pinia本地存储插件实现
+## `pinia`本地存储插件实现
+
+
+
+1.这里用一个存储的key代表一组数据，比如`tokenStore： defineStore('tokenStore', () => {})`,然后将这个值存在window的本地存储中，默认值给本地存储的值，当$store这个值发生变化的时候，同步更新window的本地存储
+
+2.这里是使用`watch`来监听
+
+
 
 ```tsx
 import { PiniaPlugin, PiniaPluginContext } from 'pinia'
@@ -40,7 +48,6 @@ type storageType = 'localStorage' | 'sessionStorage'
 function piniaStoragePluginCreator(storeIdList: string[], storageType?: storageType): PiniaPlugin
 
 function piniaStoragePluginCreator(storeId: string, storageType?: storageType): PiniaPlugin
-
 
 function piniaStoragePluginCreator(value: string | string[], storageType: storageType = 'localStorage') {
     if(isString(value)) {
@@ -82,15 +89,31 @@ function piniaStoragePluginCreator(value: string | string[], storageType: storag
 export default piniaStoragePluginCreator
 ```
 
-## 实现一个userInfo的Store
+
+
+> 一个系统通常需要的几个store如下:
+>
+> `userInfoStore`： 表示登录后的用户信息
+>
+> `menuStore`: 表示该用户有的菜单权限
+>
+> `permissionStore`： 表示该用户的权限
+>
+> `tokenStore`： 表示登录的token
+>
+> `settingStore`： 系统设置
+
+
+
+
+
+## 实现一个`userInfo`的`Store`
 
 ```tsx
 import {ref} from "@vue/reactivity";
 
 export const useUserInfo = defineStore('userInfoStore', () => {
-    const userInfo = ref<userModal>({
-        pwUserDetailVO: {}
-    })
+    const userInfo = ref<userModal>({})
     
     // 设置用户信息
     const setUserInfo = function (info) {
@@ -102,7 +125,7 @@ export const useUserInfo = defineStore('userInfoStore', () => {
         token?: string
         name?: string
         phone?: string
-        pwUserDetailVO?: object
+        token?: string
     }
     
     // 获取用户信息
@@ -112,9 +135,7 @@ export const useUserInfo = defineStore('userInfoStore', () => {
     
     // 清除用户信息
     const clearUserInfo = function() {
-        userInfo.value = {
-            pwUserDateilVO: {}
-        }
+        userInfo.value = {}
     }
     
     return { userInfo, setUserInfo, getUserInfo, clearUserInfo }
