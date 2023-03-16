@@ -99,8 +99,6 @@ export default piniaStoragePluginCreator
 >
 > `permissionStore`： 表示该用户的权限
 >
-> `tokenStore`： 表示登录的token
->
 > `settingStore`： 系统设置
 
 
@@ -142,3 +140,24 @@ export const useUserInfo = defineStore('userInfoStore', () => {
 })
 
 ```
+
+
+
+## 实现一个系统设置的`store`
+
+```tsx
+import { defineStore } from 'pinia'
+import { ref } from 'vue'
+
+export const useSetting = defineStore('settingStore', () => {
+    const collapsed = ref<boolean>(false) // 这个是菜单是否折叠
+    
+    const toggleCollapsed = function () {
+        collapsed.value = !collapsed.value
+    }
+    
+    return {
+        collapsed,
+        toggleCollapsed
+    }
+})
