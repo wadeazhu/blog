@@ -1,1 +1,1 @@
-[01.md](/blog/other//work/01.md/)<br/>
+[01.md](/blog/other//work/01.md/)<br/>[echart表格.md](/blog/other//work/echart表格.md/)<br/>[数字孪生.md](/blog/other//work/数字孪生.md/)<br/>
