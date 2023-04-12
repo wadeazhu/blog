@@ -13,7 +13,7 @@ for (; start <= 12; start++) {
         const week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
         console.log(`${year}年${start}月${j}日 ${week[_curDate.getDay()]}`)
         content += `
-## ${year}年${start}月${j}日 ${week[_curDate.getDay()]}
+## ${week[_curDate.getDay()]} (${year}-${start}-${j}) 
 
 - [ ] 日报、tabd、打卡
 - [ ] 跑步30分钟
