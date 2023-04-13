@@ -14,7 +14,7 @@ const pinia = createPinia()
 
 // 这个插件是将数据与本地存储关联
 const piniaPlugin = piniaStoragePluginCreator(
-	['userInfoStore', 'menuStore', 'premissionStore', 'tokenStore'],
+    ['userInfoStore', 'menuStore', 'premissionStore', 'tokenStore'],
     'sessionStorage'
 )
 
@@ -56,7 +56,7 @@ function piniaStoragePluginCreator(value: string | string[], storageType: storag
             if ($id === value) {
                 ctx.store.$state = JSON.parse(window[storageType].getItem($id) as any)
                 watch(
-                	$state,
+                    $state,
                     () => {
                         window[storageType].setItem($id, JSON.stringify($state))
                     },
@@ -71,10 +71,10 @@ function piniaStoragePluginCreator(value: string | string[], storageType: storag
             for (let i = 0 ; i < length; i++) {
                 if($id === value[i]) {
                     ctx.store.$state = JSON.parse(
-                    	window[StorageType].getItem($id) as any
+                        window[StorageType].getItem($id) as any
                     )
                     watch(
-                    	$state,
+                        $state,
                         () => {
                             window[storageType].setItem($id, JSON.stringify($state))
                         },
