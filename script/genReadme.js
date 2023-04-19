@@ -23,9 +23,11 @@ pathList.forEach(item => {
                 const curPath = path.join(curDirePath, file)
                 const stat = fs.statSync(curPath)
                 if (stat.isFile() && !curPath.endsWith('README.md') && !curPath.endsWith('.gitkeep')) {
-                    fileStr+=`[${file}](/blog/${item}/${dire}/${file}/)<br/>`
+                    // fileStr+=`[${file}](/blog/${item}/${dire}/${file}/)<br/>`
+                    fileStr+=`[${file}](./${file})<br/>`
                 }
             })
+            console.log(curDirePath, 'curDirePath')
             fs.writeFileSync(path.join(curDirePath, '/README.md'), fileStr, {
                 encoding: 'utf8'
             })

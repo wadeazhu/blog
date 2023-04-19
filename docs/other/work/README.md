@@ -1,1 +1,1 @@
-[01.md](/blog/other//work/01.md/)<br/>[echart表格.md](/blog/other//work/echart表格.md/)<br/>[数字孪生.md](/blog/other//work/数字孪生.md/)<br/>
+[01.md](./01.md)<br/>[echart表格.md](./echart表格.md)<br/>[uni-app常见功能的实现.md](./uni-app常见功能的实现.md)<br/>[常用的校验.md](./常用的校验.md)<br/>[数字孪生.md](./数字孪生.md)<br/>
