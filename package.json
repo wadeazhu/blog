@@ -6,16 +6,23 @@
   "type": "module",
   "scripts": {
     "genReadme": "node script/genReadme.js",
-    "docs:dev": "npm run genReadme && vuepress dev docs",
-    "docs:build": "npm run genReadme && vuepress build docs"
+    "genFileder": "node script/genFileder.js",
+    "docs:dev": "npm run genFileder && vuepress-vite dev docs",
+    "docs:build": "npm run genFileder && vuepress-vite build docs",
+    "docs:clean-dev": "vuepress-vite dev docs --clean-cache",
+    "docs:update-package": "npx vp-update"
   },
   "devDependencies": {
     "@types/node": "^18.7.17",
+    "@vuepress/bundler-vite": "2.0.0-rc.8",
     "@vuepress/plugin-medium-zoom": "^2.0.0-beta.45",
     "@vuepress/plugin-register-components": "^2.0.0-beta.45",
-    "vuepress": "^2.0.0-beta.45"
+    "vue": "^3.4.16",
+    "vuepress": "2.0.0-rc.8",
+    "vuepress-theme-hope": "2.0.0-rc.26"
   },
   "dependencies": {
-    "html2canvas": "^1.4.1"
+    "html2canvas": "^1.4.1",
+    "pinyin": "^2.11.2"
   }
 }

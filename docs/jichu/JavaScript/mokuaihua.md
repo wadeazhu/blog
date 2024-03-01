@@ -1,0 +1,237 @@
+
+
+## 模块
+
+模块可以把一个大的工程拆分成互相依赖的小文件，再用简单的方式拼接起来，在各大语言中都存在，就连`css`中都存在@import来导入`css`，但是在`es6`之前没有。所以社区定义了两种模块的规范，一种是`CommonJS`， 一种是`AMD`，前者用于服务端，后者用于浏览器端。后面再`es6`在语言层面实现了模块的功能，可以代替这两个规范。`ES6`的设计之初是用于静态解析模块，编译时就能确定依赖关系。所以这与`CommonJS`和`AMD`需要运行时解析完全不同。
+
+
+
+`CommonJS`加载的是整个模块，引入的是整个的对象，但是`ES6`模块引用的是对应属性或者方法，其他的不加载。
+
+```js
+// -- CommonJS
+const { join, resolve, relative } = require("path")
+
+// 相当于
+const _path = require("path")
+const join = _path.join
+const resolve = _path.resolve
+const relative = _path.relative
+
+// -- ES6 这里只引入了这几个方法，其他的没有加载
+import { join, resolve, relative } from 'path'
+```
+
+`ES6`模块的另一个特点，模块依赖过程中值的引入是可以实时获取变化后的值
+
+```js
+// test1.js
+export let str = 'hello'
+setTimeout(() => {
+    str = 'world'
+})
+
+// test2.js
+import { str } from 'test1.js'
+setTimeout( () => {
+    console.log(str)  // world
+}, 1000 )
+```
+
+
+
+`ES6` 优点：
+
+1. 静态加载，编译的时候就完成了模块的加载，相比于`CommonJS`来说效率更高
+2. 由于是静态加载，所以后面给静态分析有很好的扩展，比如类型检查、宏
+3. 不再需要`UMD`模块格式
+4. 以后浏览器的`api`可以用模块格式提供，而不需要全局变量和命名空间来完成
+
+## export
+
+用于将规定模块的对外接口，一个模块就是一个对立的空间，如果想从外面访问到内部属性或者方法， 就必须使用export命令。export命令后面跟一个声明的写法、或者一个大括号，里面是一组需要导出的变量或者方法。
+
+```js
+// 写法一：
+export const str = 'hello world'
+
+// 写法二： 推荐这种写法， 将需要导入的
+const num = 12
+const date = new Date()
+
+export { num, date }
+```
+
+export导入的其他设置
+
+```js
+// 重命名
+const str = 'hello world'
+export { str as str1 }
+```
+
+
+
+export可以出现在模块的任何位置，但只要是模块顶层就可以。如果是在块级作用域中就会报错
+
+```js
+const str = 'hello'
+if( str ==== 'hello' ) {
+    export const str2 = 'world' //这里会报错，因为违背了静态解析
+}
+```
+
+
+
+## import
+
+import可以导入export导出的内容。语法如下：
+
+```js
+import { name } from 'address'
+import name from 'address'
+```
+
+`name` 表示变量名， `address`表示模块名。有大括号表示export导出的，没有大括号表示`export default`导出的。后面的地址可以是绝对路径也可以是相对路径，**如果只写了一个模块名，那么必须有配置文件，告诉 JavaScript 引擎该模块的位置**。
+
+
+
+**特点一：如果写了多个模块名，es6只会加载一次**
+
+```js
+import { join } from 'path'
+import { resolve } from 'path'
+
+// 等同于
+import { join, resolve } from 'path'
+
+import { join } from 'path'
+import { join } from 'path' // 这里只会加载一次
+```
+
+
+
+**特点二：es6是静态分析，变量和模块名不能使用表达式**
+
+```js
+let str = 'get'
+import { str + 'Name'} from 'Person' // 这里会报错
+
+const moduleName = 'person'
+import { getName } from moduleName // 报错
+```
+
+
+
+**特点三：导出的变量名表示的是常量，不允许修改**
+
+```js
+import { str } from 'test'
+str = 'hello' // 这里会报错，导出的是常量，不允许修改
+```
+
+
+
+```js
+// 1、重命名
+import { name as newName } from 'person'
+
+// 2、整体载入
+// person.js 文件
+export function getName() {}
+
+export function setName() {}
+
+// index.js 中使用
+import * as person from 'person' // 这里的person是可以静态分析的，所以这里不允许运行时改变
+console.log(person.getName())
+
+person.getName = function() {} // 不允许
+person.getAge = function() {} // 不允许
+```
+
+## 整体导出
+
+```js
+// person.js 文件
+export default function getName() {}
+
+// index.js 中使用
+import allFn from 'person'  // 这里的allFn可以任意命名
+```
+
+`export default` 后面不用跟声明式语法，因为`default`相当于一个变量，用于接受后面的值，所以下面写法不正确
+
+```js
+export default const num = 33 // 报错
+export default 33 // 直接这么写就可以
+// 但是函数特殊
+export default function getName() {}  // 这里的getName，没有作用
+// 使用
+import person from 'person'  // 这里的person就表示上面的getName
+```
+
+如果想要在一个文件同时引入`export default`和`expoert`导出的内容，可以这么写
+
+```js
+import _, { clone } from 'lodash'
+
+// 对应下面的写法, ladash.js
+export default function () {}
+
+export function close() {}
+```
+
+## import和export的复合写法
+
+```js
+export { getName } from 'person'
+```
+
+这里的变量名，只是相当于一个转发的功能，并没有被导入到当前模块
+
+
+
+### 其他写法
+
+```js
+// 导出默认
+export { default } from 'person'
+
+// 改名
+export { name as newName } from 'person'
+
+// 整体输出
+export * from 'person'  // 这里会忽略 export default 导出的
+
+// 具名改成默认
+export { name as default } from 'person'
+
+// 默认改具名
+export { default as name } from 'person'
+
+// 整体输出并改名
+export * as person from 'person'
+```
+
+
+
+## import()
+
+实现一个动态加载，括号里面的参数和import中后面的参数完全一致，唯一的区别是，import()与加载的模块之间没有进行静态连接，import()类似与Node.js中的`require()`方法。
+
+```js
+// person.js
+export function getName() {}
+
+// index.js
+import('person').then(({getName}) => {
+    getName()
+}).catch(e => console.log(e))
+```
+
+
+
+## import.meta
+
+暂未用到

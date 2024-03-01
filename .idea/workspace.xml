@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0cc25f5e-d216-4e22-9304-f39f97326187" name="默认的" comment="feat: 学习echarts">
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/sidebarJson.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/genFileder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/_docs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/client.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/answer.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/answer.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/diannao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/img_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/index1.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/questionPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/components/questionPageDouyin.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/static/font/font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/static/font/heiti.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/utils/base64Save.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/utils/html2canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/utils/html2canvas2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/utils/screenshots.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/client/utils/screenshots.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/plugins/generateImage/node/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/public/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/Layout.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/utils/getTheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/后台管理/1、结构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/后台管理/2、入口文件.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/后台管理/3、store.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/后台管理/4、路由.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/后台管理/5、封装通用请求.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/后台管理/6、配置文件.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/后台管理/7、路由守卫.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/后台管理/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/后台管理/工具方法.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/advance/后台管理/说明.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/JavaScript/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/JavaScript/从0到1开发一个npm包.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/JavaScript/模块化.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/html与css/html的基础知识.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/html与css/其他.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/html与css/浮动.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/html与css/绝对定位.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/工具/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/工具/babel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/工具/babel预设和插件介绍.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/工具/eslint.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/工具/git.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/base/框架/uni-app.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interview/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interview/简历/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interview/简历/如何写好一份简历.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/echart表格.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/2023/10月.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/2023/11月.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/2023/12月.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/2023/3月.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/2023/4月.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/2023/5月.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/2023/6月.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/2023/7月.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/2023/8月.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/2023/9月.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/2023/todo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/todo/待完成.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/uni-app常见功能的实现.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/常用的校验.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/other/work/数字孪生.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/subject/html/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/temp/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/genReadme.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/genReadme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn-error.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
+        <option value="tsconfig.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2M8ntEQMj2SncueUissxWdjCX08" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/blog/docs/.vuepress",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "D:\\sorts\\webstrom\\install\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\blog\docs\.vuepress" />
+      <recent name="F:\blog\docs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\blog\_docs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.docs:dev">
+    <configuration name="genReadme.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/script/genReadme.js" working-dir="$PROJECT_DIR$/script">
+      <method v="2" />
+    </configuration>
+    <configuration name="docs:clean-dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="docs:clean-dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="docs:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="docs:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <package-manager value="npm" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.docs:dev" />
+        <item itemvalue="npm.docs:clean-dev" />
+        <item itemvalue="Node.js.genReadme.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\zhuqi\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0cc25f5e-d216-4e22-9304-f39f97326187" name="默认的" comment="" />
+      <created>1677158289053</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677158289053</updated>
+      <workItem from="1677158294552" duration="13000" />
+      <workItem from="1677158323418" duration="685000" />
+      <workItem from="1677159106804" duration="949000" />
+      <workItem from="1677161877330" duration="220000" />
+      <workItem from="1677162609657" duration="413000" />
+      <workItem from="1677163080644" duration="667000" />
+      <workItem from="1677163765609" duration="1397000" />
+      <workItem from="1677308310672" duration="807000" />
+      <workItem from="1677681805079" duration="776000" />
+      <workItem from="1677682674113" duration="425000" />
+      <workItem from="1677683122274" duration="169000" />
+      <workItem from="1677683318468" duration="704000" />
+      <workItem from="1678888475320" duration="1413000" />
+      <workItem from="1679405992586" duration="1689000" />
+      <workItem from="1679732747782" duration="1813000" />
+      <workItem from="1679737701213" duration="86000" />
+      <workItem from="1679737822592" duration="159000" />
+      <workItem from="1681548206169" duration="362000" />
+      <workItem from="1705649363281" duration="5764000" />
+      <workItem from="1708951923671" duration="9349000" />
+      <workItem from="1709177466927" duration="3538000" />
+      <workItem from="1709182460789" duration="12814000" />
+      <workItem from="1709195661804" duration="17607000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: git整理">
+      <created>1677168420029</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677168420029</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: 学习echarts">
+      <created>1679410752667</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679410752667</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: git整理" />
+    <MESSAGE value="feat: 学习echarts" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 学习echarts" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/@vuepress/core/dist/index.js</url>
+          <line>776</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/@vuepress/cli/dist/index.js</url>
+          <line>76</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/@vuepress/cli/dist/index.js</url>
+          <line>71</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/@vuepress/cli/dist/index.js</url>
+          <line>103</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
