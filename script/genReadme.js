@@ -4,7 +4,7 @@ import fs from "fs";
 
 const __filenameNew = fileURLToPath(import.meta.url)
 const __dirnameNew = path.dirname(__filenameNew)
-const pathList = ['base/', '项目/', 'interview/', 'other/', 'temp/']
+const pathList = ['base/', 'advance/', 'interview/', 'other/', 'temp/']
 const wrapperRoot = './../docs'
 pathList.forEach(item => {
     const root = path.join(__dirnameNew, wrapperRoot, item)
@@ -23,7 +23,7 @@ pathList.forEach(item => {
                 const curPath = path.join(curDirePath, file)
                 const stat = fs.statSync(curPath)
                 if (stat.isFile() && !curPath.endsWith('README.md') && !curPath.endsWith('.gitkeep')) {
-                    fileStr+=`[${file}](/blog/${item}${dire}/${file}/)<br/>`
+                    fileStr+=`[${file}](/blog/${item}/${dire}/${file}/)<br/>`
                 }
             })
             fs.writeFileSync(path.join(curDirePath, '/README.md'), fileStr, {
