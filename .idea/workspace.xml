@@ -23,8 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cc25f5e-d216-4e22-9304-f39f97326187" name="默认的" comment="feat: 部署到github.pages">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +153,7 @@
       <workItem from="1708951923671" duration="9349000" />
       <workItem from="1709177466927" duration="3538000" />
       <workItem from="1709182460789" duration="12814000" />
-      <workItem from="1709195661804" duration="27526000" />
+      <workItem from="1709195661804" duration="27625000" />
     </task>
     <task id="LOCAL-00001" summary="feat: git整理">
       <created>1677168420029</created>
@@ -212,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709350688133</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: 部署到github.pages">
+      <created>1709351142542</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709351142542</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
