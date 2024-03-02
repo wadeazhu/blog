@@ -4,4 +4,7 @@
 /docs/.vuepress/.cache
 /docs/.vuepress/.temp
 /docs/.vuepress/dist
-/docs/!.vuepress/
+
+/docs/*
+!/docs/.vuepress/
+
