@@ -7,8 +7,6 @@
 
 ### 目录介绍
 
-![image-20230401235815993](1·)
-
 - maifest.json 配置项目的信息
 - uni.scss 全局样式
 
@@ -20,10 +18,10 @@
 
 要让builder自己打开微信开发者工具，需要设置微信开发者工具
 
-![image-20230402000645844](C:\Users\zhuqi\AppData\Roaming\Typora\typora-user-images\image-20230402000645844.png)
+![image-20230402000645844](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/image-20230402000645844.png)
 
-![image-20230402000735387](C:\Users\zhuqi\AppData\Roaming\Typora\typora-user-images\image-20230402000735387.png)
+![image-20230402000735387](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/image-20230402000735387.png)
 
 已经运行的小程序，不用重新启动
 
-![image-20230402000850795](C:\Users\zhuqi\AppData\Roaming\Typora\typora-user-images\image-20230402000850795.png)
+![image-20230402000850795](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/image-20230402000850795.png)

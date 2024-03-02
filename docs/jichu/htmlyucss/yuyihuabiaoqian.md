@@ -1,0 +1,200 @@
+---
+order: 10
+---
+
+# HTML语义化标签学习
+
+## 什么是HTML语义化标签？
+
+HTML语义化标签是指用来描述网页文档结构、内容和意义的HTML标签。这些标签并不仅仅是用来定义网页的布局和样式，而是用来传达信息和意义。
+
+## 为什么要使用HTML语义化标签？
+
+使用HTML语义化标签有以下几个好处：
+
+1. 增强网站的可访问性：屏幕阅读器和搜索引擎可以更好地理解网站内容的结构和意义。
+2. 改善网站的SEO：搜索引擎可以更好地理解网站的内容和结构，从而更好地进行索引和排名。
+3. 提高代码的可维护性：语义化标签可以提高代码的可读性和可维护性，使代码更易于理解和修改。
+4. 增强网站的可用性：合理使用语义化标签可以提高用户的体验和使用效率。
+
+## 常用的HTML语义化标签
+
+下面是常用的HTML语义化标签及其作用：
+
+- `<header>`：定义文档的页眉。
+- `<nav>`：定义导航链接的容器。
+- `<main>`：定义文档的主要内容。
+- `<section>`：定义文档的区块。
+- `<article>`：定义一个文章。
+- `<aside>`：定义文档的侧边栏。
+- `<footer>`：定义文档的页脚。
+- `<figure>`：定义一组媒体内容及其标题。
+- `<figcaption>`：定义`<figure>`元素的标题。
+- `<time>`：定义日期或时间。
+
+## 最新的HTML语义化标签
+
+最新的HTML版本是HTML5，其中增加了一些新的语义化标签：
+
+- `<article>`：表示一个独立的文章或者一个内容块。
+- `<aside>`：表示当前页面或文章的附属信息，如侧边栏、广告等。
+- `<details>`：表示一个可以展开和收起的详情信息。
+- `<summary>`：表示`<details>`元素的标题。
+- `<figcaption>`：表示`<figure>`元素的标题。
+- `<figure>`：表示一组媒体内容及其标题。
+- `<footer>`：表示页面或文章的底部部分。
+- `<header>`：表示页面或文章的头部部分。
+- `<main>`：表示页面或文章的主要内容。
+- `<nav>`：表示页面的导航菜单。
+- `<section>`：表示文档中的一个区块。
+
+## 案例演示
+
+下面是一个使用语义化标签的网页结构示例：
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>语义化标签示例</title>
+</head>
+<body>
+    <header>
+        <h1>网站标题</h1>
+        <nav>
+          <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">服务项目</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>公司简介</h2>
+        <p>公司成立于2010年，专注于提供高品质的XXX服务。</p>
+    </section>
+    <section>
+        <h2>服务项目</h2>
+        <article>
+            <h3>项目1</h3>
+            <p>项目1的介绍和内容。</p>
+        </article>
+        <article>
+            <h3>项目2</h3>
+            <p>项目2的介绍和内容。</p>
+        </article>
+    </section>
+    <aside>
+        <h2>联系我们</h2>
+        <p>地址：XXX</p>
+        <p>电话：XXX</p>
+        <p>邮箱：XXX</p>
+    </aside>
+</main>
+<footer>
+    <p>&copy; 2023 XXX公司</p>
+</footer>
+</body>
+</html>  
+```
+
+## 练习题
+
+1. 使用语义化标签重构以下HTML代码：
+
+```html
+<div id="header">
+    <h1>网站标题</h1>
+    <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">服务项目</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+</div>
+<div id="main">
+    <h2>公司简介</h2>
+    <p>公司成立于2010年，专注于提供高品质的XXX服务。</p>
+</div>
+<div id="sidebar">
+    <h2>联系我们</h2>
+    <p>地址：XXX</p>
+    <p>电话：XXX</p>
+    <p>邮箱：XXX</p>
+</div>
+<div id="footer">
+    <p>&copy; 2023 XXX公司</p>
+</div>
+```
+
+2. 根据以下需求，使用语义化标签编写一个网页结构：
+
+- 网站标题为“我的个人主页”；
+- 导航菜单包括“首页”、“个人简介”、“工作经历”、“联系方式”；
+- 个人简介包括个人照片和个人介绍；
+- 工作经历包括公司名称、职位和工作内容；
+- 联系方式包括地址、电话和邮箱；
+- 网页底部包括版权信息和联系方式。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的个人主页</title>
+</head>
+<body>
+    <header>
+        <h1>我的个人主页</h1>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">个人简介</a></li>
+                <li><a href="#">工作经历</a></li>
+                <li><a href="#">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>个人简介</h2>
+            <figure>
+                <img src="my_photo.jpg" alt="我的个人照片">
+                <figcaption>我是XXX，XXX</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>工作经历</h2>
+            <ul>
+                <li>
+                    <h3>公司名称1</h3>
+                    <p>职位：XXX</p>
+                    <p>工作内容：XXX</p>
+                </li>
+                <li>
+                    <h3>公司名称2</h3>
+                    <p>职位：XXX</p>
+                    <p>工作内容：XXX</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>联系方式</h2>
+            <ul>
+                <li><p>地址：XXX</p></li>
+                <li><p>电话：XXX</p></li>
+                <li><p>邮箱：XXX</p></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 我的个人主页</p>
+        <address>地址：XXX 电话：XXX 邮箱：XXX</address>
+    </footer>
+</body>
+</html>
+```
+
