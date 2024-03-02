@@ -14,7 +14,7 @@ const __filenameNew = fileURLToPath(import.meta.url)
 const __dirnameNew = path.dirname(__filenameNew)
 const wrapperRoot = './../docs'
 const _wrapperRoot = './../_docs'
-const whitelistItems = ['.vuepress', 'README.md']
+const whitelistItems = ['.vuepress']
 const navbarJson = []
 const sidebarJson = {}
 // 删除目录中除了白名单中列出的文件或目录之外的所有内容
