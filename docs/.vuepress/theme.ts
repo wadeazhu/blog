@@ -1,6 +1,8 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
+// @ts-ignore
+import params from './params.json'
 
 // @ts-ignore
 // @ts-ignore
@@ -21,7 +23,10 @@ export default hopeTheme({
   docsDir: "src",
 
   // 导航栏
-  navbar,
+  navbar: params.mode === 'dev' ? navbar : false,
+
+  // breadcrumb: params.mode === 'dev',
+  breadcrumb: false,
 
   // 侧边栏
   sidebar,
@@ -57,6 +62,8 @@ export default hopeTheme({
     //   category: "Announcements",
     //   categoryId: "DIC_kwDOG_Pt2M4COD69",
     // },
+
+    catalog: params.mode === 'dev',
 
     components: {
       components: ["Badge", "VPCard"],

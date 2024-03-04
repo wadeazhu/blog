@@ -10,6 +10,7 @@ import fs from "fs";
 // const pinyin = require('pinyin');
 import pinyin from "pinyin";
 
+
 const __filenameNew = fileURLToPath(import.meta.url)
 const __dirnameNew = path.dirname(__filenameNew)
 const wrapperRoot = './../docs'
@@ -20,10 +21,14 @@ const sidebarJson = {}
 // 删除目录中除了白名单中列出的文件或目录之外的所有内容
 const directoryPath = path.join(__dirnameNew, wrapperRoot) // 修改为你的目录路径
 const _directoryPath = path.join(__dirnameNew, _wrapperRoot) // 修改为你的目录路径
-cleanDirectory(directoryPath, whitelistItems);
-copyDirectorySync(_directoryPath, directoryPath);
-fs.writeFileSync(path.join(__dirnameNew, wrapperRoot, '.vuepress/navbarJson.json'), JSON.stringify(navbarJson));
-fs.writeFileSync(path.join(__dirnameNew, wrapperRoot, '.vuepress/sidebarJson.json'), JSON.stringify(sidebarJson));
+export function genFilederFn(mode) {
+    cleanDirectory(directoryPath, whitelistItems);
+    copyDirectorySync(_directoryPath, directoryPath);
+    fs.writeFileSync(path.join(__dirnameNew, wrapperRoot, '.vuepress/navbarJson.json'), JSON.stringify(navbarJson));
+    fs.writeFileSync(path.join(__dirnameNew, wrapperRoot, '.vuepress/sidebarJson.json'), JSON.stringify(sidebarJson));
+    fs.writeFileSync(path.join(__dirnameNew, wrapperRoot, '.vuepress/params.json'), JSON.stringify({mode}));
+}
+
 
 
 function cleanDirectory(directoryPath, whitelistItems) {

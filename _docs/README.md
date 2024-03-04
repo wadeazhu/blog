@@ -10,6 +10,14 @@ heroFullScreen: true
 
 
 copyright: false
-footer: false
+footer: false 
 ---
+
+
+
+权限问题
+
+
+
+
 
