@@ -34,17 +34,18 @@ jobs:
           cache: pnpm
 
       # 运行构建脚本
-#      - name: Build VuePress site
-#        run: pnpm docs:build
+      - name: Build VuePress site
+        run: pnpm docs:build
 
       # 打包到华为云
       - name: 发布到华为云
-        user: easingthemes/ssh-deploy@main
+        uses: easingthemes/ssh-deploy@main
         env:
           # 私钥
           SSH_PRIVATE_KEY: ${{ secrets.YUN_PRIVATE_KEY }}
           # SCP参数
-          ARGS: '-rltgoDzvO --delete'
+#          ARGS: '-rltgoDzvO --delete'
+          ARGS: '-avzr --delete'
           # 源目录
           SOURCE: 'docs/.vitepress/dist/'
           # 服务器ip
