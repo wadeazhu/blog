@@ -38,22 +38,22 @@ jobs:
         run: pnpm docs:build
 
       # 打包到华为云
-      - name: 发布到华为云
-        user: easingthemes/ssh-deploy@main
-        env:
-          # 私钥
-          SSH_PRIVATE_KEY: ${{ secrets.YUN_PRIVATE_KEY }}
-          # SCP参数
-          ARGS: '-avzr --delete'
-          # 源目录
-          SOURCE: 'docs/.vitepress/dist/'
-          # 服务器ip
-          REMOTE_HOST: '119.3.250.225'
-          # 用户
-          REMOTE_USER: 'root'
-          # 目标地址
-          # TARGET: '/var/www/html'
-          TARGET: '/www/wwwroot/azhu1024.top'
+#      - name: 发布到华为云
+#        user: easingthemes/ssh-deploy@main
+#        env:
+#          # 私钥
+#          SSH_PRIVATE_KEY: ${{ secrets.YUN_PRIVATE_KEY }}
+#          # SCP参数
+#          ARGS: '-avzr --delete'
+#          # 源目录
+#          SOURCE: 'docs/.vitepress/dist/'
+#          # 服务器ip
+#          REMOTE_HOST: '119.3.250.225'
+#          # 用户
+#          REMOTE_USER: 'root'
+#          # 目标地址
+#          # TARGET: '/var/www/html'
+#          TARGET: '/www/wwwroot/azhu1024.top'
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
