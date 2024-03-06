@@ -44,12 +44,13 @@ jobs:
           # 私钥
           SSH_PRIVATE_KEY: ${{ secrets.YUN_PRIVATE_KEY }}
           # SCP参数
-#          ARGS: '-rltgoDzvO --delete'
-          ARGS: '-avzr --delete'
+          ARGS: '-rltgoDzvO --delete'
+#          ARGS: '-avzr --delete'
           # 源目录
           SOURCE: 'docs/.vitepress/dist/'
           # 服务器ip
           REMOTE_HOST: '119.3.250.225'
+
           # 用户
           REMOTE_USER: 'root'
           # 目标地址
