@@ -7,7 +7,8 @@
   "scripts": {
     "genReadme": "node script/genReadme.js",
     "docs:dev": "node script/genFilederDev.js && vuepress-vite dev docs",
-    "docs:build": "node script/genFilederProd.js && vuepress-vite build docs",
+    "docs:build": "node script/genFilederDev.js && vuepress-vite build docs",
+    "docs:build:line": "node script/genFilederProd.js && vuepress-vite build docs",
     "docs:clean-dev": "vuepress-vite dev docs --clean-cache",
     "docs:update-package": "npx vp-update"
   },
