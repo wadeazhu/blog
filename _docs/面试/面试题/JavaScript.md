@@ -262,7 +262,7 @@ console.log(n1 + n2)  // 0.30000000000000004
 
 下面看一下**双精度数是如何保存**的：
 
-![img](F:\blog\_docs\面试\面试题\JavaScript\1603641384908-7958dffa-6d26-4e36-963e-b41c9e3ca8b0.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603641384908-7958dffa-6d26-4e36-963e-b41c9e3ca8b0.png)
 
 - 第一部分（蓝色）：用来存储符号位（sign），用来区分正负数，0表示正数，占用1位
 - 第二部分（绿色）：用来存储指数（exponent），占用11位
@@ -921,7 +921,7 @@ const [a, b, c] = [1, 2, 3]
 
 最终，a、b、c分别被赋予了数组第0、1、2个索引位的值：
 
-![img](F:\blog\_docs\面试\面试题\JavaScript\1616076913177-30749c84-8254-4543-a3e7-c2fb488a4228.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1616076913177-30749c84-8254-4543-a3e7-c2fb488a4228.png)
 
 数组里的0、1、2索引位的元素值，精准地被映射到了左侧的第0、1、2个变量里去，这就是数组解构的工作模式。还可以通过给左侧变量数组设置空占位的方式，实现对数组中某几个元素的精准提取：
 
@@ -931,7 +931,7 @@ const [a,,c] = [1,2,3]
 
 通过把中间位留空，可以顺利地把数组第一位和最后一位的值赋给 a、c 两个变量：
 
-![img](F:\blog\_docs\面试\面试题\JavaScript\1616076913186-eb8be693-9b19-48e5-bda5-9dbd7cc77ea6.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1616076913186-eb8be693-9b19-48e5-bda5-9dbd7cc77ea6.png)
 
 **2）对象的解构**
 
@@ -952,7 +952,7 @@ const { name, age } = stu
 
 这样就得到了 name 和 age 两个和 stu 平级的变量：
 
-![img](F:\blog\_docs\面试\面试题\JavaScript\1616076913314-53687a23-07ef-4a01-a78a-a0304f2b2826.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1616076913314-53687a23-07ef-4a01-a78a-a0304f2b2826.png)
 
 注意，对象解构严格以属性名作为定位依据，所以就算调换了 name 和 age 的位置，结果也是一样的：
 
@@ -2385,7 +2385,7 @@ Boolean，在DOM树中，注册了listener的元素， 是否要先于它下面�
 
 **特点：**JavaScript 对象是通过引用来传递的，创建的每个新对象实体中并没有一份属于自己的原型副本。当修改原型时，与之相关的对象也会继承这一改变。
 
-![img](F:\blog\_docs\面试\面试题\JavaScript\1615475711487-c474af95-b5e0-4778-a90b-9484208d724d.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1615475711487-c474af95-b5e0-4778-a90b-9484208d724d.png)
 
 ### 2. 原型修改、重写
 
@@ -2435,7 +2435,7 @@ Person.prototype.constructor  // Person
 
 由于`Object`是构造函数，原型链终点是`Object.prototype.__proto__`，而`Object.prototype.__proto__=== null // true`，所以，原型链的终点是`null`。原型链上的所有原型都是对象，所有的对象最终都是由`Object`构造的，而`Object.prototype`的下一级是`Object.prototype.__proto__`。
 
-![img](F:\blog\_docs\面试\面试题\JavaScript\1605247722640-5bcb9156-a8b4-4d7c-83d7-9ff80930e1de.jpeg)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1605247722640-5bcb9156-a8b4-4d7c-83d7-9ff80930e1de.jpeg)
 
 ### 5. 如何获得对象非原型链上的属性？
 
@@ -2842,7 +2842,7 @@ async function func1() {
 console.log(func1())
 ```
 
-![img](F:\blog\_docs\面试\面试题\JavaScript\1604021075237-8249a8df-3a28-4bca-9f22-02923aba8618.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1604021075237-8249a8df-3a28-4bca-9f22-02923aba8618.png)
 
 func1的运行结果其实就是一个Promise对象。因此也可以使用then来处理后续逻辑。
 
@@ -3248,7 +3248,7 @@ let result = testAsy();
 console.log(result)
 ```
 
-![img](F:\blog\_docs\面试\面试题\JavaScript\1605099411873-d2eac25a-5d8c-4586-bc36-769bce79010e.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1605099411873-d2eac25a-5d8c-4586-bc36-769bce79010e.png)
 
 所以，async 函数返回的是一个 Promise 对象。async 函数（包含函数语句、函数表达式、Lambda表达式）会返回一个 Promise 对象，如果在函数中 `return` 一个直接量，async 会把这个直接量通过 `Promise.resolve()` 封装成 Promise 对象。
 

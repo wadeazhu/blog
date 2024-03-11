@@ -20,7 +20,7 @@ React并不是将click事件绑定到了div的真实DOM上，而是在document�
 
 除此之外，冒泡到document上的事件也不是原生的浏览器事件，而是由react自己实现的合成事件（SyntheticEvent）。因此如果不想要是事件冒泡的话应该调用event.preventDefault()方法，而不是调用event.stopProppagation()方法。
 
-![img](F:\blog\_docs\面试\面试题\React\1611890469312-7504e85d-c6db-481e-b9d3-5307a3de708c.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1611890469312-7504e85d-c6db-481e-b9d3-5307a3de708c.png)
 
 JSX 上写的事件并没有绑定在对应的真实 DOM 上，而是通过事件代理的方式，将所有的事件都统一绑定在了 `document` 上。这样的方式不仅减少了内存消耗，还能在组件挂载销毁时统一订阅和移除事件。
 
@@ -677,7 +677,7 @@ render() {
 
 不可以，render 阶段 DOM 还没有生成，无法获取 DOM。DOM 的获取需要在 pre-commit 阶段和 commit 阶段：
 
-![img](F:\blog\_docs\面试\面试题\React\1611822510207-8101671e-8b5a-4968-88b1-85d44e078b0b.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1611822510207-8101671e-8b5a-4968-88b1-85d44e078b0b.png)
 
 ### 18. 对React的插槽(Portals)的理解，如何使用，有哪些使用场景
 
@@ -1039,7 +1039,7 @@ React.forwardRef 会创建一个React组件，这个组件能够将其接受的 
 
 ### 1. React setState 调用的原理
 
-![img](F:\blog\_docs\面试\面试题\React\1611908814278-be06f25f-ee6f-44d5-93f1-c0a24eecd456.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1611908814278-be06f25f-ee6f-44d5-93f1-c0a24eecd456.png)
 
 具体的执行过程如下（源码级解析）：
 
@@ -1406,7 +1406,7 @@ Greeting.propTypes = {
 - 更新过程（Update），组件状态发生变化，重新更新渲染的过程；
 - 卸载过程（Unmount），组件从DOM树中被移除的过程；
 
-![img](F:\blog\_docs\面试\面试题\React\1611914193870-a5a93315-a094-40aa-959a-e3e3c58c8a96.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1611914193870-a5a93315-a094-40aa-959a-e3e3c58c8a96.png)
 
 #### 1）组件挂载阶段
 
@@ -1656,7 +1656,7 @@ componentDidCatch(error, info)，此生命周期在后代组件抛出错误后�
 
 React常见的生命周期如下：
 
-![img](F:\blog\_docs\面试\面试题\React\1606974748814-56e52599-8cda-4305-8135-eaf64d75fbb9.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1606974748814-56e52599-8cda-4305-8135-eaf64d75fbb9.png)
 
 **React常见生命周期的过程大致如下：**
 
@@ -1823,7 +1823,7 @@ const o2 = JSON.parse(JSON.stringify(this.state.obj))
 
 **state 更新流程：**
 
-![img](F:\blog\_docs\面试\面试题\React\1616079696588-fe9625ce-a23f-42ef-ae52-247b29b5ee3c.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1616079696588-fe9625ce-a23f-42ef-ae52-247b29b5ee3c.png)
 
 这个过程当中涉及的函数：
 
@@ -1838,7 +1838,7 @@ const o2 = JSON.parse(JSON.stringify(this.state.obj))
 
 **props 更新流程：**
 
-![img](F:\blog\_docs\面试\面试题\React\1616079696446-71709f4d-1b94-4405-9538-5167ed5e4f2a.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1616079696446-71709f4d-1b94-4405-9538-5167ed5e4f2a.png)
 
 相对于 state 更新，props 更新后唯一的区别是增加了对 componentWillReceiveProps 的调用。关于 componentWillReceiveProps，需要知道这些事情：
 
@@ -1876,7 +1876,7 @@ const o2 = JSON.parse(JSON.stringify(this.state.obj))
 
 关于 React16 开始应用的新生命周期：
 
-![img](F:\blog\_docs\面试\面试题\React\1616079836302-3fdd2b2a-6d54-4a7e-92bd-86a6aa27aea6.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1616079836302-3fdd2b2a-6d54-4a7e-92bd-86a6aa27aea6.png)
 
 可以看出，React16 自上而下地对生命周期做了另一种维度的解读：
 
@@ -2924,7 +2924,7 @@ function DemoFunction(props) {
 
 实际上，类组件和函数组件之间，是面向对象和函数式编程这两套不同的设计思想之间的差异。而函数组件更加契合 React 框架的设计理念：
 
-![img](F:\blog\_docs\面试\面试题\React\1610696273368-c5361298-048d-4eb1-9d35-7700b6601553.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1610696273368-c5361298-048d-4eb1-9d35-7700b6601553.png)
 
 React 组件本身的定位就是函数，一个输入数据、输出 UI 的函数。作为开发者，我们编写的是声明式的代码，而 React 框架的主要工作，就是及时地把声明式的代码转换为命令式的 DOM 操作，把数据层面的描述映射到用户可见的 UI 变化中去。这就意味着从原则上来讲，React 的数据应该总是紧紧地和渲染绑定在一起的，而类组件做不到这一点。**函数组件就真正地将数据和渲染绑定到了一起。****函数组件是一个更加匹配其设计理念、也更有利于逻辑拆分与重用的组件表达形式。**
 
@@ -3302,7 +3302,7 @@ Virtual DOM本质上是JavaScript的对象，它可以很方便的跨平台操�
 
 实际上，diff 算法探讨的就是虚拟 DOM 树发生变化后，生成 DOM 树更新补丁的方式。它通过对比新旧两株虚拟 DOM 树的变更差异，将更新补丁作用于真实 DOM，以最小成本完成视图更新。
 
-![img](F:\blog\_docs\面试\面试题\React\1609406214678-c2afb29a-fcbc-4d54-8970-97cb7f20fe20.jpeg)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1609406214678-c2afb29a-fcbc-4d54-8970-97cb7f20fe20.jpeg)
 
 具体的流程如下：
 
@@ -3310,7 +3310,7 @@ Virtual DOM本质上是JavaScript的对象，它可以很方便的跨平台操�
 - 当虚拟 DOM 发生变化后，就会根据差距计算生成 patch，这个 patch 是一个结构化的数据，内容包含了增加、更新、移除等；
 - 根据 patch 去更新真实的 DOM，反馈到用户的界面上。
 
-![img](F:\blog\_docs\面试\面试题\React\1609406240365-40166729-9e07-43a2-a9f2-71838e830ad8.jpeg)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1609406240365-40166729-9e07-43a2-a9f2-71838e830ad8.jpeg)
 
 一个简单的例子：
 
@@ -4216,11 +4216,11 @@ JavaScript中的map不会对为null或者undefined的数据进行处理，而Rea
 
 
 
-![img](F:\blog\_docs\面试\面试题\React\1612599697115-b749fd70-9747-4f83-a836-72f46f5e91de.jpeg)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1612599697115-b749fd70-9747-4f83-a836-72f46f5e91de.jpeg)
 
 - 服务端数据请求
 
-![img](F:\blog\_docs\面试\面试题\React\1612599745397-099cca87-5c01-4c45-94ad-318b054b7a01.jpeg)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1612599745397-099cca87-5c01-4c45-94ad-318b054b7a01.jpeg)
 
 **2）html渲染**
 
@@ -4228,11 +4228,11 @@ JavaScript中的map不会对为null或者undefined的数据进行处理，而Rea
 
 - 非ssr html渲染
 
-![img](F:\blog\_docs\面试\面试题\React\1612599842432-0b804ffa-177b-43c8-a973-d633917b784b.jpeg)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1612599842432-0b804ffa-177b-43c8-a973-d633917b784b.jpeg)
 
 - ssr html渲染
 
-![img](F:\blog\_docs\面试\面试题\React\1612599902197-a00e3b91-390f-47b7-856f-b1f2d5c782f7.jpeg)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1612599902197-a00e3b91-390f-47b7-856f-b1f2d5c782f7.jpeg)
 
 ### 20. 为什么 React 要用 JSX？
 

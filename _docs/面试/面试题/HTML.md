@@ -82,7 +82,7 @@ DOCTYPE是HTML5中一种标准通用标记语言的文档类型声明，它的�
 
 下图可以直观的看出三者之间的区别:
 
-![img](F:\blog\_docs\面试\面试题\HTML\1603547262709-5029c4e4-42f5-4fd4-bcbb-c0e0e3a40f5a.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603547262709-5029c4e4-42f5-4fd4-bcbb-c0e0e3a40f5a.png)
 
 其中蓝色代表js脚本网络加载时间，红色代表js脚本执行时间，绿色代表html解析。
 
@@ -525,7 +525,8 @@ Canvas是画布，通过Javascript来绘制2D图形，是逐像素进行渲染�
 
 ### 16. head 标签有什么作用，其中什么标签必不可少？
 
-<head> 标签用于定义文档的头部，它是所有头部元素的容器。<head> 中的元素可以引用脚本、指示浏览器在哪里找到样式表、提供元信息等。
+`<head>` 标签用于定义文档的头部，它是所有头部元素的容器。`<head>` 中的元素可以引用脚本、指示浏览器在哪里找到样式表、提供元信息等。
+
 
 
 
@@ -533,11 +534,11 @@ Canvas是画布，通过Javascript来绘制2D图形，是逐像素进行渲染�
 
 
 
-下面这些标签可用在 head 部分：<base>, <link>, <meta>, <script>, <style>, <title>。 
+下面这些标签可用在 head 部分：`<base>, <link>, <meta>, <script>, <style>, <title>`。 
 
 
 
-其中 <title> 定义文档的标题，它是 head 部分中唯一必需的元素。
+其中 `<title>` 定义文档的标题，它是 head 部分中唯一必需的元素。
 
 ### 17. 文档声明（Doctype）和<!Doctype html>有何作用? 严格模式与混杂模式如何区分？它们有何意义?
 

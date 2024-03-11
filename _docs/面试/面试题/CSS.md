@@ -230,9 +230,9 @@ window.requestAnimationFrame() 告诉浏览器——你希望执行一个动画�
 
 CSS3中的盒模型有以下两种：标准盒子模型、IE盒子模型
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603600820746-e10daafa-451a-454e-9705-f8c358769d5b.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603600820746-e10daafa-451a-454e-9705-f8c358769d5b.png)
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603600820555-dc6ed390-d47e-412b-942a-857bbe5f280d.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603600820555-dc6ed390-d47e-412b-942a-857bbe5f280d.png)
 
 盒模型都是由四个部分组成的，分别是margin、border、padding和content。
 
@@ -382,7 +382,7 @@ CSSSprites（精灵图），将一个页面涉及到的所有图片都包含到�
 
 对于图片来说，为了保证其不失真，1 个图片像素至少要对应一个物理像素，假如原始图片是 500300 像素，那么在 3 倍屏上就要放一个 1500900 像素的图片才能保证 1 个物理像素至少对应一个图片像素，才能不失真。
 
-![img](F:\blog\_docs\面试\面试题\CSS\1605252903834-27a1d90a-7e04-49bc-822a-dadcf974c141.jpeg)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1605252903834-27a1d90a-7e04-49bc-822a-dadcf974c141.jpeg)
 
 当然，也可以针对所有屏幕，都只提供最高清图片。虽然低密度屏幕用不到那么多图片像素，而且会因为下载多余的像素造成带宽浪费和下载延迟，但从结果上说能保证图片在所有屏幕上都不会失真。
 
@@ -634,9 +634,7 @@ CSS 工程化是为了解决以下问题：
 
 **（1）预处理器：为什么要用预处理器？它的出现是为了解决什么问题？**
 
-预处理器，其实就是 CSS 世界的“轮子”。预处理器支持我们写一种类似 CSS、但实际并不是 CSS 的语言，然后把它编译成 CSS 代码：
-
-![img](F:\blog\_docs\面试\面试题\CSS\1615998492170-c294084b-84d5-4537-87bb-b32da4bf0cd6.png)
+预处理器，其实就是 CSS 世界的“轮子”。预处理器支持我们写一种类似 CSS、但实际并不是 CSS 的语言，然后把它编译成 CSS 代码
 
 那为什么写 CSS 代码写得好好的，偏偏要转去写“类 CSS”呢？这就和本来用 JS 也可以实现所有功能，但最后却写 React 的 jsx 或者 Vue 的模板语法一样——为了爽！要想知道有了预处理器有多爽，首先要知道的是传统 CSS 有多不爽。随着前端业务复杂度的提高，前端工程中对 CSS 提出了以下的诉求：
 
@@ -659,7 +657,7 @@ CSS 工程化是为了解决以下问题：
 
 PostCss 仍然是一个对 CSS 进行解析和处理的工具，它会对 CSS 做这样的事情：
 
-![img](F:\blog\_docs\面试\面试题\CSS\1615998491947-34e3237c-e54f-4b1a-8aeb-3c38655e1cb0.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1615998491947-34e3237c-e54f-4b1a-8aeb-3c38655e1cb0.png)
 
 它和预处理器的不同就在于，预处理器处理的是 类CSS，而 PostCss 处理的就是 CSS 本身。Babel 可以将高版本的 JS 代码转换为低版本的 JS 代码。PostCss 做的是类似的事情：它可以编译尚未被浏览器广泛支持的先进的 CSS 语法，还可以自动为一些需要额外兼容的语法增加前缀。更强的是，由于 PostCss 有着强大的插件机制，支持各种各样的扩展，极大地强化了 CSS 的能力。
 
@@ -701,7 +699,7 @@ Webpack 能处理 CSS 吗：
 - `imgs.offsetTop` 是元素顶部距离文档顶部的高度（包括滚动条的距离）；
 - 内容达到显示区域的：`img.offsetTop < window.innerHeight + document.body.scrollTop;`
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603966605254-fe880ec0-ebd1-4f94-b662-cdd5e5396c34.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603966605254-fe880ec0-ebd1-4f94-b662-cdd5e5396c34.png)
 
 ### 30. z-index属性在什么情况下会失效
 
@@ -1165,7 +1163,7 @@ flex属性是flex-grow，flex-shrink和flex-basis的简写，默认值为0 1 aut
 
 品字布局就像下图这样：
 
-![img](F:\blog\_docs\面试\面试题\CSS\1633609587312-4de73cfb-5ab3-45bb-bb09-869d276f3ae5.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1633609587312-4de73cfb-5ab3-45bb-bb09-869d276f3ae5.png)
 
 **（1）浮动实现**
 
@@ -1253,7 +1251,7 @@ div{
 
 实现效果如下：
 
-![img](F:\blog\_docs\面试\面试题\CSS\1633610665378-f963f052-32d2-4e58-aa8d-a9d351acd816.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1633610665378-f963f052-32d2-4e58-aa8d-a9d351acd816.png)
 
 首先，定义好通用的HTML结构：
 
@@ -1399,7 +1397,7 @@ li:nth-of-type(n+7){
 
 需要注意的是，设置为inline-block的元素之间可能会出现间隙，就可能出现下面这种情况：
 
-![img](F:\blog\_docs\面试\面试题\CSS\1633612884193-e4637218-0459-4235-b090-f9ceb2c33c85.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1633612884193-e4637218-0459-4235-b090-f9ceb2c33c85.png)
 
 这里使用了letter-spacing属性来消除这种影响，该属性可以用来增加或减少字符间的空白（字符间距）。使用之后就正常了，出现了预期的效果。也可以给ul设置font-size: 0;来消除盒子之间的字符间距：
 
@@ -1637,7 +1635,7 @@ clear属性只有块级元素才有效的，而::after等伪元素默认都是�
 
 层叠顺序，英文称作 stacking order，表示元素发生层叠时有着特定的垂直显示顺序。下面是盒模型的层叠规则：
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603553952688-ad155942-9d1d-4e4b-86a7-0f7dca46e6d1.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603553952688-ad155942-9d1d-4e4b-86a7-0f7dca46e6d1.png)
 
 对于上图，由上到下分别是：
 
@@ -1675,17 +1673,17 @@ position有以下属性值：
 
 - **relative：**元素的定位永远是相对于元素自身位置的，和其他元素没关系，也不会影响其他元素。
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603554694939-58dfe7f7-2fc9-45e5-9961-a953f95496a7.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603554694939-58dfe7f7-2fc9-45e5-9961-a953f95496a7.png)
 
 - **fixed：**元素的定位是相对于 window （或者 iframe）边界的，和其他元素没有关系。但是它具有破坏性，会导致其他元素位置的变化。
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603554694841-89472ba9-b236-4098-802f-c3c26ff49466.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603554694841-89472ba9-b236-4098-802f-c3c26ff49466.png)
 
 - **absolute：**元素的定位相对于前两者要复杂许多。如果为 absolute 设置了 top、left，浏览器会根据什么去确定它的纵向和横向的偏移量呢？答案是浏览器会递归查找该元素的所有父元素，如果找到一个设置了`position:relative/absolute/fixed`的元素，就以该元素为基准定位，如果没找到，就以浏览器边界定位。如下两个图所示：
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603554694882-589670e0-cd52-41d4-a3ed-4ebbdfc88f32.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603554694882-589670e0-cd52-41d4-a3ed-4ebbdfc88f32.png)
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603554694842-2764d9ed-d5fe-45f4-8ede-34a73d237f94.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603554694842-2764d9ed-d5fe-45f4-8ede-34a73d237f94.png)
 
 ### 7. **display、float、position的关系**
 
@@ -1753,7 +1751,7 @@ div {
 
 将元素的长宽都设置为0，显示出来的效果是这样的：
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603636245125-d60dca78-0577-4aa1-8809-f1d38594889a.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245125-d60dca78-0577-4aa1-8809-f1d38594889a.png)
 
 所以可以根据border这个特性来绘制三角形：
 
@@ -1769,7 +1767,7 @@ div {
 }
 ```
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603636245420-28c28277-5074-4725-9386-ffc955cf950a.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245420-28c28277-5074-4725-9386-ffc955cf950a.png)
 
 **（2）三角2**
 
@@ -1783,7 +1781,7 @@ div {
 }
 ```
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603636245172-36f955bd-075b-442a-b88b-6c084c66ed25.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245172-36f955bd-075b-442a-b88b-6c084c66ed25.png)
 
 **（3）三角3**
 
@@ -1797,7 +1795,7 @@ div {
 }
 ```
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603636245082-84a06746-dfc7-4782-a0d4-27d521aecac7.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245082-84a06746-dfc7-4782-a0d4-27d521aecac7.png)
 
 **（4）三角4**
 
@@ -1811,7 +1809,7 @@ div {
 }
 ```
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603636245064-ecd01197-99fc-476e-897f-a4165b55792a.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245064-ecd01197-99fc-476e-897f-a4165b55792a.png)
 
 **（5）三角5**
 
@@ -1824,7 +1822,7 @@ div {
 }
 ```
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603636245095-5b40d585-7e68-4bb0-aaef-6c8fce7d36b8.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245095-5b40d585-7e68-4bb0-aaef-6c8fce7d36b8.png)
 
 还有很多，就不一一实现了，总体的原则就是通过上下左右边框来控制三角形的方向，用边框的宽度比来控制三角形的角度。
 
@@ -1842,7 +1840,7 @@ div{
 }
 ```
 
-![img](F:\blog\_docs\面试\面试题\CSS\1603636444767-26da7bbe-5479-44e2-9088-50c9211d6c0d.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636444767-26da7bbe-5479-44e2-9088-50c9211d6c0d.png)
 
 ### 3. 实现一个圆和半圆
 
@@ -1951,7 +1949,7 @@ div {
 
 效果：
 
-![img](F:\blog\_docs\面试\面试题\CSS\1630773730069-a1bf7073-14ba-4665-9e5e-cf0aa0722235.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1630773730069-a1bf7073-14ba-4665-9e5e-cf0aa0722235.png)
 
 （2）实现一个等腰梯形
 
@@ -1967,7 +1965,7 @@ div {
 
 效果：
 
-![img](F:\blog\_docs\面试\面试题\CSS\1630773825580-c1821c13-4513-4462-9a13-73ad4a3ef6e6.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1630773825580-c1821c13-4513-4462-9a13-73ad4a3ef6e6.png)
 
 ### 5. 画一条0.5px的线
 
@@ -2007,7 +2005,7 @@ window.devicePixelRatio = 设备的物理像素 / CSS像素。
 
 打开 Chrome 浏览器，启动移动端调试模式，在控制台去输出这个 `devicePixelRatio` 的值。这里选中 iPhone6/7/8 这系列的机型，输出的结果就是2：
 
-![img](F:\blog\_docs\面试\面试题\CSS\1615998119364-e2b81466-ba5b-4eb8-af5f-61c5621bb0af.png)
+![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1615998119364-e2b81466-ba5b-4eb8-af5f-61c5621bb0af.png)
 
 这就意味着设置的 1px CSS 像素，在这个设备上实际会用 2 个物理像素单元来进行渲染，所以实际看到的一定会比 1px 粗一些。
 
