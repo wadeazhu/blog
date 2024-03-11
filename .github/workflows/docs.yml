@@ -1,4 +1,4 @@
-name: docs
+name: 部署到线上-自己用的环境
 
 on:
   # 每当 push 到 main 分支时触发部署
