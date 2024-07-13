@@ -635,6 +635,12 @@ if(Object.keys(Obj).length < 0){
 }
 ```
 
+### 数组的常见操作方式
+
+some： 检查数组中是否至少有一个元素满足指定条件，返回true或false
+
+every： 检查数组中所有元素是否满足指定条件，返回true或false
+
 ## ES6
 
 ### 1. let、const、var的区别
@@ -695,67 +701,25 @@ new操作符的实现步骤如下：
 
 **（1）箭头函数比普通函数更加简洁**
 
-- 如果没有参数，就直接写一个空括号即可
-- 如果只有一个参数，可以省去参数的括号
-- 如果有多个参数，用逗号分割
-- 如果函数体的返回值只有一句，可以省略大括号
-- 如果函数体不需要返回值，且只有一句话，可以给这个语句前面加一个void关键字。最常见的就是调用一个函数：
+**（2）箭头函数没有自己的this，this指向上一级作用域**
 
-```javascript
-let fn = () => void doesNotReturn();
-```
+**（3）call()、apply()、bind()等方法不能改变箭头函数中this的指向**
 
-**（2）箭头函数没有自己的this**
-
-箭头函数不会创建自己的this， 所以它没有自己的this，它只会在自己作用域的上一层继承this。所以箭头函数中this的指向在它在定义时已经确定了，之后不会改变。
-
-**（3）箭头函数继承来的this指向永远不会改变**
-
-```javascript
-var id = 'GLOBAL';
-var obj = {
-  id: 'OBJ',
-  a: function(){
-    console.log(this.id);
-  },
-  b: () => {
-    console.log(this.id);
-  }
-};
-obj.a();    // 'OBJ'
-obj.b();    // 'GLOBAL'
-new obj.a()  // undefined
-new obj.b()  // Uncaught TypeError: obj.b is not a constructor
-```
-
-对象obj的方法b是使用箭头函数定义的，这个函数中的this就永远指向它定义时所处的全局执行环境中的this，即便这个函数是作为对象obj的方法调用，this依旧指向Window对象。需要注意，定义对象的大括号`{}`是无法形成一个单独的执行环境的，它依旧是处于全局执行环境中。
-
-**（4）call()、apply()、bind()等方法不能改变箭头函数中this的指向**
-
-```javascript
-var id = 'Global';
-let fun1 = () => {
-    console.log(this.id)
-};
-fun1();                     // 'Global'
-fun1.call({id: 'Obj'});     // 'Global'
-fun1.apply({id: 'Obj'});    // 'Global'
-fun1.bind({id: 'Obj'})();   // 'Global'
-```
-
-**（5）箭头函数不能作为构造函数使用**
+**（4）箭头函数不能作为构造函数使用**
 
 构造函数在new的步骤在上面已经说过了，实际上第二步就是将函数中的this指向该对象。 但是由于箭头函数时没有自己的this的，且this指向外层的执行环境，且不能改变指向，所以不能当做构造函数使用。
 
-**（6）箭头函数没有自己的arguments**
+**（5）箭头函数没有自己的arguments**
 
 箭头函数没有自己的arguments对象。在箭头函数中访问arguments实际上获得的是它外层函数的arguments值。
 
-**（7）箭头函数没有prototype**
+**（6）箭头函数没有prototype**
 
-**（8）箭头函数不能用作Generator函数，不能使用yeild关键字**
+**（7）箭头函数不能用作Generator函数，不能使用yeild关键字**
 
 ### 5. 箭头函数的**this**指向哪⾥？
+
+this指向上一级作用域
 
 箭头函数不同于传统JavaScript中的函数，箭头函数并没有属于⾃⼰的this，它所谓的this是捕获其所在上下⽂的 this 值，作为⾃⼰的 this 值，并且由于没有属于⾃⼰的this，所以是不会被new调⽤的，这个所谓的this也不会被改变。
 
@@ -1116,13 +1080,13 @@ console.log(repeated) // repeat for 3 times;repeat for 3 times;repeat for 3 time
 
 **new操作符的执行过程：**
 
-（1）首先创建了一个新的空对象
+（1）首先创建了一个新的空对象， `const obj = {}`
 
-（2）设置原型，将对象的原型设置为函数的 prototype 对象。
+（2）设置原型，将对象的原型设置为函数的 prototype 对象。 `obj.setPrototypeOf(constructor.prototype)`
 
-（3）让函数的 this 指向这个对象，执行构造函数的代码（为这个新对象添加属性）
+（3）让函数的 this 指向这个对象，执行构造函数的代码（为这个新对象添加属性）`constructor.call(obj , args)`
 
-（4）判断函数的返回值类型，如果是值类型，返回创建的对象。如果是引用类型，就返回这个引用类型的对象。
+（4）判断函数的返回值类型，如果是值类型，返回创建的对象。如果是引用类型，就返回这个引用类型的对象。`return obj`
 
 
 
@@ -3453,27 +3417,86 @@ async function fn(){
 
 ### 2. 对象继承的方式有哪些？
 
-（1）第一种是以原型链的方式来实现继承，但是这种实现方式存在的缺点是，在包含有引用类型的数据时，会被所有的实例对象所共享，容易造成修改的混乱。还有就是在创建子类型的时候不能向超类型传递参数。
+父类
 
+```js
+function Parent(name) {
+    this.name = name
+}
+Parent.prototype.getName = function() {
+    return this.name
+}
+```
 
+1. 第一种是以原型链的方式来实现继承，但是这种实现方式存在的缺点是，在包含有引用类型的数据时，会被所有的实例对象所共享，容易造成修改的混乱。还有就是在创建子类型的时候不能向超类型传递参数。
 
-（2）第二种方式是使用借用构造函数的方式，这种方式是通过在子类型的函数中调用超类型的构造函数来实现的，这一种方法解决了不能向超类型传递参数的缺点，但是它存在的一个问题就是无法实现函数方法的复用，并且超类型原型定义的方法子类型也没有办法访问到。
+   ```js
+   function Child() {
+       
+   }
+   Child.prototype = new Parent('xiaoming') // 导致后面的Child实例对象都共享这个父实例的数据
+   Child.prototype.constructor = Child
+   ```
 
+2. 第二种方式是使用借用构造函数的方式，这种方式是通过在子类型的函数中调用超类型的构造函数来实现的，这一种方法解决了不能向超类型传递参数的缺点，但是它存在的一个问题就是无法实现函数方法的复用，并且超类型原型定义的方法子类型也没有办法访问到。
 
+   ```js
+   function Child(name, age) {
+       Parent.call(this, name) // 但是父类的原型上的方法无法继承 
+       this.age = age
+   }
+   ```
 
-（3）第三种方式是组合继承，组合继承是将原型链和借用构造函数组合起来使用的一种方式。通过借用构造函数的方式来实现类型的属性的继承，通过将子类型的原型设置为超类型的实例来实现方法的继承。这种方式解决了上面的两种模式单独使用时的问题，但是由于我们是以超类型的实例来作为子类型的原型，所以调用了两次超类的构造函数，造成了子类型的原型中多了很多不必要的属性。
+3. 第三种方式是组合继承，组合继承是将原型链和借用构造函数组合起来使用的一种方式。通过借用构造函数的方式来实现类型的属性的继承，通过将子类型的原型设置为超类型的实例来实现方法的继承。这种方式解决了上面的两种模式单独使用时的问题，但是由于我们是以超类型的实例来作为子类型的原型，所以调用了两次超类的构造函数，造成了子类型的原型中多了很多不必要的属性。
 
+   ```js
+   function Child(name, age) {
+       Parent.call(this, name)
+       this.age = age
+   }
+   Child.prototype = new Parent('xiaoming')
+   Child.prototype.constructor = Child
+   ```
 
+4. 第四种方式是原型式继承，原型式继承的主要思路就是基于已有的对象来创建新的对象，实现的原理是，向函数中传入一个对象，然后返回一个以这个对象为原型的对象。这种继承的思路主要不是为了实现创造一种新的类型，只是对某个对象实现一种简单继承，ES5 中定义的 Object.create() 方法就是原型式继承的实现。缺点与原型链方式相同。
 
-（4）第四种方式是原型式继承，原型式继承的主要思路就是基于已有的对象来创建新的对象，实现的原理是，向函数中传入一个对象，然后返回一个以这个对象为原型的对象。这种继承的思路主要不是为了实现创造一种新的类型，只是对某个对象实现一种简单继承，ES5 中定义的 Object.create() 方法就是原型式继承的实现。缺点与原型链方式相同。
+   ```js
+   const child = Object.create(Parent.prototype)
+   ```
 
+5. 第五种方式是寄生式继承，寄生式继承的思路是创建一个用于封装继承过程的函数，通过传入一个对象，然后复制一个对象的副本，然后对象进行扩展，最后返回这个对象。这个扩展的过程就可以理解是一种继承。这种继承的优点就是对一个简单对象实现继承，如果这个对象不是自定义类型时。缺点是没有办法实现函数的复用。
 
+   ```js
+   function clone(Parent) {
+       const child = Object.create(Parent.prototype)
+   	child.setAge = function(age) {
+           this.age = age
+       }
+   }
+   const child = clone(Parent)
+   ```
 
-（5）第五种方式是寄生式继承，寄生式继承的思路是创建一个用于封装继承过程的函数，通过传入一个对象，然后复制一个对象的副本，然后对象进行扩展，最后返回这个对象。这个扩展的过程就可以理解是一种继承。这种继承的优点就是对一个简单对象实现继承，如果这个对象不是自定义类型时。缺点是没有办法实现函数的复用。
+6. 第六种方式是寄生式组合继承，组合继承的缺点就是使用超类型的实例做为子类型的原型，导致添加了不必要的原型属性。寄生式组合继承的方式是使用超类型的原型的副本来作为子类型的原型，这样就避免了创建不必要的属性。
 
+   ```js
+   function Parent(name) {
+       this.name = name
+   }
+   Parent.prototype.getName = function() {
+       return this.name
+   }
+   const extend = function(Parent, Child) {
+       Child.prototype = Object.create(Parent.prototype)
+       Child.prototype.contructor = Child
+   }
+   function Child(name, age) {
+       Parent.call(this, name)
+       this.age = age 
+   }
+   extend(Parent, Child)
+   ```
 
-
-（6）第六种方式是寄生式组合继承，组合继承的缺点就是使用超类型的实例做为子类型的原型，导致添加了不必要的原型属性。寄生式组合继承的方式是使用超类型的原型的副本来作为子类型的原型，这样就避免了创建不必要的属性。
+7. es6的extends关键词继承,es6的实现是借用了寄生式组合继承
 
 ## 垃圾回收与内存泄漏
 
@@ -3518,7 +3541,7 @@ function fun() {
 
 ```javascript
 obj1.a =  null
- obj2.a =  null
+obj2.a =  null
 ```
 
 #### （3）减少垃圾回收

@@ -1732,241 +1732,6 @@ sticky 英文字面意思是粘贴，所以可以把它称之为粘性定位。�
 
 ## 四、场景应用
 
-### 1. 实现一个三角形
-
-CSS绘制三角形主要用到的是border属性，也就是边框。
-
-
-
-平时在给盒子设置边框时，往往都设置很窄，就可能误以为边框是由矩形组成的。实际上，border属性是右三角形组成的，下面看一个例子：
-
-```css
-div {
-    width: 0;
-    height: 0;
-    border: 100px solid;
-    border-color: orange blue red green;
-}
-```
-
-将元素的长宽都设置为0，显示出来的效果是这样的：
-
-![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245125-d60dca78-0577-4aa1-8809-f1d38594889a.png)
-
-所以可以根据border这个特性来绘制三角形：
-
-**（1）三角1**
-
-```css
-div {
-    width: 0;
-    height: 0;
-    border-top: 50px solid red;
-    border-right: 50px solid transparent;
-    border-left: 50px solid transparent;
-}
-```
-
-![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245420-28c28277-5074-4725-9386-ffc955cf950a.png)
-
-**（2）三角2**
-
-```css
-div {
-    width: 0;
-    height: 0;
-    border-bottom: 50px solid red;
-    border-right: 50px solid transparent;
-    border-left: 50px solid transparent;
-}
-```
-
-![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245172-36f955bd-075b-442a-b88b-6c084c66ed25.png)
-
-**（3）三角3**
-
-```css
-div {
-    width: 0;
-    height: 0;
-    border-left: 50px solid red;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-}
-```
-
-![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245082-84a06746-dfc7-4782-a0d4-27d521aecac7.png)
-
-**（4）三角4**
-
-```css
-div {
-    width: 0;
-    height: 0;
-    border-right: 50px solid red;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-}
-```
-
-![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245064-ecd01197-99fc-476e-897f-a4165b55792a.png)
-
-**（5）三角5**
-
-```css
-div {
-    width: 0;
-    height: 0;
-    border-top: 100px solid red;
-    border-right: 100px solid transparent;
-}
-```
-
-![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636245095-5b40d585-7e68-4bb0-aaef-6c8fce7d36b8.png)
-
-还有很多，就不一一实现了，总体的原则就是通过上下左右边框来控制三角形的方向，用边框的宽度比来控制三角形的角度。
-
-### 2. 实现一个扇形
-
-用CSS实现扇形的思路和三角形基本一致，就是多了一个圆角的样式，实现一个90°的扇形：
-
-```css
-div{
-    border: 100px solid transparent;
-    width: 0;
-    height: 0;
-    border-radius: 100px;
-    border-top-color: red;
-}
-```
-
-![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1603636444767-26da7bbe-5479-44e2-9088-50c9211d6c0d.png)
-
-### 3. 实现一个圆和半圆
-
-**（1）实现圆：**
-
-```css
-div {
-  background-color: red;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-```
-
-**注意：**在使用border-radius时，使用50%和100%都可以得到一个圆，那这两个值到底有什么区别呢：border-radius的值是百分比的话，就相当于盒子的宽度和高度的百分比。如一个50px 150px的方形，如果border-radius设置为100%，则等价于：
-
-```css
-border-radius: 50px/150px; 1
-```
-
-而border-radius又是由border-top-left-radius、border-top-right-radius、border-bottom-left-radius、border-bottom-right-radius组成，所有上面border-radius：100%又等价于：
-
-```css
-border-top-left-radius: 100%; 
-border-top-right-radius: 100%; 
-border-bottom-left-radius: 100%; 
-border-bottom-right-radius: 100%;
-```
-
-或
-
-```css
-border-top-left-radius: 50px 150px; 
-border-top-right-radius: 50px 150px; 
-border-bottom-left-radius: 50px 150px; 
-border-bottom-right-radius: 50px 150px; 
-```
-
-为什么border-radius设置成100%和50%都能画成圆呢？因为，在W3C中对重合曲线做了规定：如果两个相邻的半径和超过了对应的盒子的边的长度，那么浏览器要重新计算以保证它们不重合。也就是说，如果相邻圆角的半径都设置成大于50%，那么浏览器会根据图形的实际情况做一些计算。因此，为了避免不必要的计算，建议使用border-radius: 50%。
-
-**（2）实现半圆：**
-
-```css
-div {
-  background-color: red;
-  width: 100px;
-  height: 50px;
-  border-radius: 0px 0px 100px 100px;
-}
-```
-
-### 4. 实现一个宽高自适应的正方形
-
-- 利用vw来实现：
-
-```css
-.square {
-  width: 10%;
-  height: 10vw;
-  background: tomato;
-}
-```
-
-- 利用元素的margin/padding百分比是相对父元素width的性质来实现：
-
-```css
-.square {
-  width: 20%;
-  height: 0;
-  padding-top: 20%;
-  background: orange;
-}
-```
-
-- 利用子元素的margin-top的值来实现：
-
-```css
-.square {
-  width: 30%;
-  overflow: hidden;
-  background: yellow;
-}
-.square::after {
-  content: '';
-  display: block;
-  margin-top: 100%;
-}
-```
-
-### 4. 画一个梯形
-
-```javascript
-<div class="trapezoid"></div>
-```
-
-（1）实现一个直角梯形：
-
-```css
-.trapezoid {
-    height: 0;
-    width: 100px;
-    border-bottom: 100px solid red;
-    border-right: 40px solid transparent;
-}
-```
-
-效果：
-
-![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1630773730069-a1bf7073-14ba-4665-9e5e-cf0aa0722235.png)
-
-（2）实现一个等腰梯形
-
-```css
-.trapezoid {
-  height:0;
-  width:100px;
-  border-width:0 40px 100px 40px;
-  border-style:none solid solid;
-  border-color:transparent transparent red;
-}
-```
-
-效果：
-
-![img](https://azhu-images.oss-cn-hangzhou.aliyuncs.com/img-for-marktext/1630773825580-c1821c13-4513-4462-9a13-73ad4a3ef6e6.png)
-
 ### 5. 画一条0.5px的线
 
 - **采用transform: scale()的方式**，该方法用来定义元素的2D 缩放转换：
@@ -2083,3 +1848,24 @@ metaEl.setAttribute('content', `width=device-width,user-scalable=no,initial-scal
 ```
 
 这样解决了，但这样做的副作用也很大，整个页面被缩放了。这时 1px 已经被处理成物理像素大小，这样的大小在手机上显示边框很合适。但是，一些原本不需要被缩小的内容，比如文字、图片等，也被无差别缩小掉了。
+
+
+
+### 大屏自适应
+
+#### 1.简单方式 css 的transform: scale
+
+缺点就是一些组件如果有用到宽高的话，就会出现定位bug，比如echarts
+
+#### 2.vw 和 vh的方式
+
+假设设计稿1920*1080， 那么1vw = 1920/100
+
+这样一来，以一个宽 300px 和 200px 的 div 来说，其所占的宽高，以 vw 和 vh 为单位，计算方式如下: vwDiv = (300px / 1920px ) * 100vw vhDiv = (200px / 1080px ) * 100vh
+
+接着可以用scss或者less写一个函数来实现计算
+
+#### 3.rem的方式
+
+### echarts的响应式
+
